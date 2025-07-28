@@ -1,0 +1,411 @@
+backend:
+  name: git-gateway
+  repo: https://github.com/anwaozo/catsellstexas
+  branch: main
+
+media_folder: public/images
+public_folder: public/images
+logo_url: https://catsellstexas.netlify.app/Catherine-Perales.png
+display_url: https://catsellstexas.netlify.app/
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+collections:
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "content/common.md"
+        label: "Site Settings"
+        name: "site_settings"
+        fields:
+          - label: "Brand Logo"
+            name: "Brandlogo"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Header"
+            name: "Header"
+            widget: "object"
+            fields:
+              - label: "Menu"
+                name: "menu"
+                widget: "list"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+          - label: "Footer Menu"
+            name: "FooterMenu"
+            widget: "object"
+            fields:
+              - {
+                  label: "Newsletter Heading",
+                  name: "newsLetterHeading",
+                  widget: "string",
+                }
+              - {
+                  label: "Newsletter Subheading",
+                  name: "newsLetterSubheading",
+                  widget: "string",
+                }
+              - {
+                  label: "Newsletter Input Placeholder",
+                  name: "newsLetterInputPlaceholder",
+                  widget: "string",
+                }
+              - {
+                  label: "Newsletter Button Label",
+                  name: "newsLetterButtonLabel",
+                  widget: "string",
+                }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - {
+                  label: "Branding Image",
+                  name: "brandingImage",
+                  widget: "image",
+                }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Menu Sections"
+                name: "menu"
+                widget: "list"
+                fields:
+                  - { label: "Section", name: "section", widget: "string" }
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    fields:
+                      - {
+                          label: "Link Label",
+                          name: "linkLabel",
+                          widget: "string",
+                        }
+                      - {
+                          label: "Link Path",
+                          name: "linkPath",
+                          widget: "string",
+                        }
+              - label: "Address Section"
+                name: "addressSection"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Address", name: "address", widget: "string" }
+              - label: "Email Section"
+                name: "emailSection"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Email", name: "email", widget: "string" }
+              - label: "Phone Section"
+                name: "phoneSection"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+              - {
+                  label: "Branding Heading",
+                  name: "brandingHeading",
+                  widget: "string",
+                }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - name: "metaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "text",
+                }
+          - label: "Hero Section"
+            name: "heroSection"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "text" }
+              - { label: "Sub Heading", name: "subHeading", widget: "text" }
+              - label: "Call to Action"
+                name: "cta"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Avatars"
+                name: "avatars"
+                widget: "list"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Rating"
+                name: "rating"
+                widget: "object"
+                fields:
+                  - { label: "Platform", name: "platform", widget: "string" }
+                  - {
+                      label: "Value",
+                      name: "value",
+                      widget: "number",
+                      value_type: "float",
+                    }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Stars", name: "stars", widget: "image" }
+              - label: "Hero Image"
+                name: "hero_image"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Services Section"
+            name: "servicesSection"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Link Text", name: "linkText", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "About Section"
+            name: "aboutSection"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Video"
+                name: "video"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "file" }
+                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Gallery Section"
+            name: "gallerySection"
+            widget: "object"
+            fields:
+              - label: "Properties"
+                name: "properties"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - name: "metaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "text",
+                }
+          - label: "About Hero"
+            name: "AboutHero"
+            widget: "object"
+            fields:
+              - label: "Image Text"
+                name: "Imagetext"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Featured Image"
+                name: "featuredImage"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Brand Image"
+                name: "brandImage"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Contact Section"
+            name: "ContactSection"
+            widget: "object"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - label: "Link"
+                name: "link"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+          - label: "Platforms"
+            name: "platforms"
+            widget: "list"
+            fields:
+              - { label: "Source", name: "src", widget: "image" }
+          - label: "About Mission"
+            name: "AboutMission"
+            widget: "object"
+            fields:
+              - label: "Left Image"
+                name: "leftImage"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Middle Image"
+                name: "middleImage"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Right Card"
+                name: "rightCard"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "text" }
+                  - label: "Paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    field:
+                      { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "About Quote"
+            name: "AboutQuote"
+            widget: "object"
+            fields:
+              - label: "Background Image"
+                name: "backgroundImage"
+                widget: "object"
+                fields:
+                  - { label: "Source", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+          - label: "Ready to Connect Section"
+            name: "ReadyToConnectSection"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+                  - label: "Style"
+                    name: "style"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Background",
+                          name: "background",
+                          widget: "string",
+                        }
+                      - {
+                          label: "Text Color",
+                          name: "textColor",
+                          widget: "string",
+                        }
+
+      - file: "content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - name: "metaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "text",
+                }
+          - label: "Reach Us Section"
+            name: "reachUsSection"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Office"
+                name: "office"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Address", name: "address", widget: "string" }
+              - label: "Contact Number"
+                name: "contactNumber"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Number", name: "number", widget: "string" }
+              - label: "Email"
+                name: "email"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Address", name: "address", widget: "string" }
+              - label: "Connect Online"
+                name: "connectOnline"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string" }
+
+      - file: "content/listings.md"
+        label: "Listings Page"
+        name: "listings"
+        fields:
+          - name: "metaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "text",
+                }
+          - name: "introSection"
+            label: "Intro Section"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }

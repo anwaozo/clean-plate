@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hidden Form for Netlify - Property Tour</title>
+</head>
+<body>
+  <!-- Hidden form for Netlify to detect -->
+  <form name="property-tour-form" data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
+    <!-- Basic Tour Information -->
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="tourDate" />
+    <input type="text" name="tourTime" />
+    <input type="text" name="hasAgent" />
+    <textarea name="comments"></textarea>
+
+    <!-- Client Contact Information -->
+    <input type="text" name="fullLegalName" />
+    <input type="text" name="preferredName" />
+    <input type="text" name="preferredContactMethod" />
+    <textarea name="currentAddress"></textarea>
+    <input type="text" name="bestTimesToContact" />
+
+    <!-- Representation Type -->
+    <input type="text" name="representationType" />
+
+    <!-- Additional Questions -->
+    <input type="text" name="howDidYouHear" />
+    <input type="text" name="referralSource" />
+    <textarea name="reasonForBuyingSelling"></textarea>
+    <textarea name="mostImportant"></textarea>
+    <input type="text" name="previousExperience" />
+    <input type="text" name="urgencyScale" />
+    <textarea name="concerns"></textarea>
+
+    <!-- Honeypot field for spam protection -->
+    <input type="text" name="bot-field" />
+  </form>
+</body>
+</html>
