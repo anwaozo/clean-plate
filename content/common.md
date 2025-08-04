@@ -5,7 +5,7 @@ Brandlogo:
 Header:
   menu:
     - linkLabel: Browse Meals
-      linkPath: /
+      linkPath: /browse-meals
     - linkLabel: Plans
       linkPath: /
     - linkLabel: About Us

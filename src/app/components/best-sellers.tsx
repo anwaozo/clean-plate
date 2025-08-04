@@ -16,56 +16,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProductCard from "./product-card";
+import { MEALS } from "@/lib/data";
 
 export default function BestsellersSection() {
-  const meals = [
-    {
-      id: 1,
-      image: "/Frame 126.png",
-      alt: "Grilled Chicken & Quinoa Bowl",
-      badges: [
-        { text: "Family Friendly", color: "bg-[#4B4B4B] text-white" },
-        { text: "Contains Allergen", color: "bg-[#E7D8D4] text-[#C73007]" },
-      ],
-      title: "Grilled Chicken & Quinoa Bowl",
-      description:
-        "A hearty, protein-packed favorite with a zesty lemon dressing.",
-      time: "15mins",
-      nutrition: "High Protein",
-    },
-    {
-      id: 2,
-      image: "/image1.png",
-      alt: "Spicy Tofu Stir-Fry",
-      badges: [{ text: "Spicy", color: "bg-[#FE7438] text-white" }],
-      title: "Spicy Tofu Stir-Fry",
-      description: "Bold, colorful, plant-based goodness with a kick of spice.",
-      time: "15mins",
-      nutrition: "Veggie",
-    },
-    {
-      id: 3,
-      image: "/Frame 14.png",
-      alt: "BBQ Ranch Chicken Flatbreads",
-      badges: [{ text: "Bestseller", color: "bg-[#FE7438] text-white" }],
-      title: "BBQ Ranch Chicken Flatbreads",
-      description:
-        "With double cheese, it's topped with tangy-sweet BBQ chicken, mozzarella, white cheddar, and a drizzle of ranch dressing.",
-      time: "15mins",
-      nutrition: "Carb-conscious",
-    },
-    {
-      id: 4,
-      image: "/Frame 14 (2).png",
-      alt: "Creamy Pesto Pasta",
-      badges: [],
-      title: "Creamy Pesto Pasta",
-      description: "Creamy pesto pasta with cherry tomatoes and fresh basil.",
-      time: "15mins",
-      nutrition: "Quick Prep",
-    },
-  ];
-
   return (
     <section className="py-16 bg-[#F8F7F2]">
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 text-center">
@@ -96,7 +49,7 @@ export default function BestsellersSection() {
           }}
           className="w-full pb-12"
         >
-          {meals.map((meal) => (
+          {MEALS.map((meal) => (
             <SwiperSlide key={meal.id}>
               <ProductCard meal={meal} />
             </SwiperSlide>

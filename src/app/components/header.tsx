@@ -45,10 +45,25 @@ const Header = () => {
           <span className="sr-only">Close banner</span>
         </Button>
       </div>
-      <header className="font-archivo bg-white px-6 sticky top-0 z-50 py-2">
+      <header className="font-archivo bg-white px-4 lg:px-6 sticky top-0 z-50 py-2 lg:py-0">
         <div className="max-w-[1400px] mx-auto flex justify-between items-center">
           <div className="flex justify-center gap-10 items-center">
-            <BrandLogo />
+            <div className="flex gap-2 items-center ">
+              <Button
+                variant="outline"
+                className="flex lg:hidden h-fit border-none p-1 shadow-none"
+                onClick={toggleMenu}
+              >
+                <Image
+                  src={"/quill_hamburger.png"}
+                  alt="phone icon"
+                  height={24}
+                  width={24}
+                />
+              </Button>
+              <BrandLogo />
+            </div>
+
             <div className="hidden gap-2 lg:flex ">
               {NAV_ITEMS.menu.map(
                 (
@@ -66,25 +81,16 @@ const Header = () => {
               )}
             </div>
           </div>
-
-          <div className="hidden lg:flex items-center  justify-center gap-4">
+          <div className="flex lg:hidden items-center  justify-center gap-2">
+            {/* <MenuIcon href="" src="/icons/Search_alt_light.png" /> */}
+            <MenuIcon href="" src="/icons/Bag_light.png" />
+            <MenuIcon href="" src="/icons/User_cicrle_light.png" />
+          </div>
+          <div className="hidden lg:flex items-left  justify-left gap-4">
             <MenuIcon href="" src="/icons/Search_alt_light.png" />
             <MenuIcon href="" src="/icons/Bag_light.png" />
             <MenuIcon href="" src="/icons/User_cicrle_light.png" />
           </div>
-
-          <Button
-            variant="outline"
-            className="flex lg:hidden h-fit border-none shadow-none"
-            onClick={toggleMenu}
-          >
-            <Image
-              src={"/quill_hamburger.png"}
-              alt="phone icon"
-              height={24}
-              width={24}
-            />
-          </Button>
         </div>
       </header>
 
