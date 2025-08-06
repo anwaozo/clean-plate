@@ -20,7 +20,7 @@ const metrics = [
 
 const Subscriptions = () => {
   return (
-    <div className="font-sans">
+    <div className="">
       <div className="max-w-[670px] mx-auto px-4 pt-16 pb-6 text-center text-[#212121] space-y-2">
         <h2 className="font-semibold text-2xl lg:text-[40px] leading-10 font-bricolageG">
           Pick a Meal Plan That Works for You

@@ -15,7 +15,7 @@ const CartModal = ({ isOpen, onClose }: any) => {
         <DialogHeader className="border-b border-[#EEEEEE] pb-4">
           <DialogTitle className="font-bricolageG font-semibold text-[32px]">My Cart</DialogTitle>
         </DialogHeader>
-        <div className="w-full min-h-[60vh] h-full py-4 font-sans text-[#4B4B4B] flex flex-col justify-between ">
+        <div className="w-full min-h-[60vh] h-full py-4  text-[#4B4B4B] flex flex-col justify-between ">
           <div className="w-full border border-[#EEEEEE] rounded-lg p-4 flex items-center justify-between gap-4">
             <div className="border border-[#F1BC9F] rounded-lg p-2.5 w-fit">
               <Image

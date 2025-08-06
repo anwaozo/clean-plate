@@ -36,8 +36,8 @@ const inputData = [
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-full flex flex-col items-center justify-center px-4 lg:px-6 py-12 font-sans">
-        <div className="bg-white rounded-lg px-6 py-8 shadow-lg max-w-lg w-full space-y-8 h-fit ">
+      <div className="h-[100vh] flex flex-col items-center justify-center px-4 lg:px-6 py-12 ">
+        <div className="bg-white rounded-lg px-6 py-8 shadow-lg max-w-lg w-full space-y-10 h-fit ">
           <Title
             title="Forgot password"
             text="Enter your email and set a new password to continue."
@@ -45,7 +45,7 @@ const page = () => {
             hrefText=""
           />
           <div>
-            <div className="w-full space-y-4 font-sans">
+            <div className="w-full space-y-6 font-bricolageG">
               {inputData.map((input, index) => (
                 <ReusableInput
                   key={index}
@@ -58,8 +58,8 @@ const page = () => {
               ))}
             </div>
 
-            <div className="w-full mt-4">
-              <ul className="list-disc  pl-5 text-[#212121] text-sm font-sans marker:text-[#CACACA]">
+            <div className="w-full mt-6">
+              <ul className="list-disc  pl-5 text-[#212121] text-sm  marker:text-[#CACACA]">
                 <li className="marker:text-[#CACACA]">Minimum 8 characters</li>
                 <li className="marker:text-[#CACACA]">
                   At least one uppercase letter

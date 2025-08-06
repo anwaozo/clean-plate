@@ -4,7 +4,7 @@ import React from "react";
 const CheckoutBreadcrumb = () => {
   return (
     <>
-      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-[#4B4B4B] py-6 font-sans">
+      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-[#4B4B4B] py-6 ">
         <span>Meal Prep</span>
         <ChevronRight className="w-4 h-4" />
         <span>Standard Plan</span>
@@ -13,7 +13,7 @@ const CheckoutBreadcrumb = () => {
       </div>
       <hr className="py-2 border-t border-[#E1E1E1]" />
       <div className="flex items-center justify-center space-x-4 mb-8">
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           <div className="w-6 h-6 bg-[#FE7438] text-white rounded-full flex items-center justify-center text-sm">
             <Check className="h-3.5 w-3.5" />
           </div>

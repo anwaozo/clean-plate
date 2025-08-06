@@ -10,28 +10,11 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Title from "../_components/title";
 
-const inputData = [
-  {
-    placeholder: "Enter your email",
-    icon: "/Message_open_light.svg",
-    label: "Email",
-    type: "email",
-    alt: "Email Icon",
-  },
-  {
-    placeholder: "Enter your password",
-    icon: "/Lock_light.svg",
-    label: "Password",
-    type: "password",
-    alt: "Password Icon",
-  },
-];
-
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-full flex flex-col items-center justify-center px-4 lg:px-6 py-12 font-sans">
-        <div className="bg-white rounded-lg px-6 py-8 shadow-lg max-w-lg w-full space-y-8 h-fit ">
+      <div className="h-[100vh] flex flex-col items-center justify-center  px-4 lg:px-6 py-12 ">
+        <div className="bg-white rounded-lg px-6 py-8 shadow-lg max-w-md w-full  space-y-10 h-fit ">
           <Title
             title="Sign in"
             text="Don't have an account yet?"
@@ -39,17 +22,22 @@ const page = () => {
             hrefText="Register here"
           />
           <div>
-            <div className="w-full space-y-4 font-sans">
-              {inputData.map((input, index) => (
-                <ReusableInput
-                  key={index}
-                  placeholder={input.placeholder}
-                  icon={input.icon}
-                  label={input.label}
-                  type={input.type}
-                  alt={input.alt}
-                />
-              ))}
+            <div className="w-full space-y-6 ">
+              <ReusableInput
+                icon="/Message_open_light.svg"
+                placeholder="Enter your email"
+                label="Email"
+                type="email"
+                alt="Email Icon"
+              />
+
+              <ReusableInput
+                placeholder="Enter your password"
+                icon="/Lock_light.svg"
+                label="Password"
+                type="password"
+                alt="Password Icon"
+              />
             </div>
 
             <div className="w-full flex items-center justify-between mt-4">
@@ -73,7 +61,7 @@ const page = () => {
 
           <div className="space-y-4">
             <ReusableButton text="Login" />
-            <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-3 h-fit shadow-none">
+            <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-2 h-fit shadow-none">
               <Image
                 src={"/Google logo.svg"}
                 alt="google icon"
