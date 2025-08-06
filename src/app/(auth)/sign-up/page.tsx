@@ -44,8 +44,8 @@ const inputData = [
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-full flex flex-col items-center justify-center px-4 lg:px-6 py-6 font-sans">
-        <div className="bg-white rounded-lg px-6 py-8 shadow-2xl max-w-lg w-full space-y-8 h-fit">
+      <div className="h-[100vh] flex flex-col items-center justify-center px-4 lg:px-6 py-6 ">
+        <div className="bg-white rounded-lg px-8 py-8 shadow-2xl max-w-md w-full space-y-10 h-fit">
           <Title
             title="Create new account"
             text="Already have an account?"
@@ -53,7 +53,7 @@ const page = () => {
             hrefText="Sign in"
           />
           <div>
-            <div className="w-full space-y-4 font-sans">
+            <div className="w-full space-y-6 ">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {inputData.slice(0, 2).map((input, index) => (
                   <ReusableInput
@@ -88,7 +88,7 @@ const page = () => {
 
           <div className="space-y-4">
             <ReusableButton text="Create my account" />
-            <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-3 h-fit shadow-none">
+            <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-2 h-fit shadow-none">
               <Image
                 src={"/Google logo.svg"}
                 alt="google icon"

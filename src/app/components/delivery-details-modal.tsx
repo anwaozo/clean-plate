@@ -53,7 +53,7 @@ const DeliveryDetailsModal = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="sm:max-w-[700px] h-fit [&>button]:!hidden font-sans px-4 lg:px-6">
+      <DialogContent className="sm:max-w-[700px] h-fit [&>button]:!hidden  px-4 lg:px-6">
         <DialogHeader className="items-center justify-center">
           <DialogTitle className="font-semibold text-base">
             Choose Your Delivery Details
