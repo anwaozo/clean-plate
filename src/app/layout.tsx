@@ -35,9 +35,8 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${BricolageG.variable}`}>
       <body className={`antialiased`} suppressHydrationWarning>
         {/* <AosClient> */}
-        <Header />
+
         {children}
-        <Footer />
         {/* </AosClient> */}
       </body>
     </html>
