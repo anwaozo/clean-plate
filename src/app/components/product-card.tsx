@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { MenuIcon } from "./layouts/logo";
 import { Warning } from "postcss";
+import Link from "next/link";
 
 interface ProductProps {
   image: string;
@@ -26,12 +27,14 @@ const ProductCard = ({ meal }: { meal: ProductProps }) => {
   return (
     <Card className="w-full h-[400px] lg:h-[544px] rounded-xl p-2 shadow-lg border-2 border-gray-200 border-dashed border-dash-wide ">
       <CardHeader className="p-0 relative w-full h-40 lg:h-80">
-        <Image
-          src={meal.image || "/placeholder.svg"}
-          alt={meal.alt}
-          fill
-          className="rounded-t-xl object-cover "
-        />
+        <Link href={`/menu/${meal.title.toLowerCase().replace(/\s+/g, "-")}`}>
+          <Image
+            src={meal.image || "/placeholder.svg"}
+            alt={meal.alt}
+            fill
+            className="rounded-t-xl object-cover "
+          />
+        </Link>
       </CardHeader>
       <CardContent className="p-4">
         <div className="flex flex-wrap gap-2 mb-2">
