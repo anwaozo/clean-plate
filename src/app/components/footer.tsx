@@ -10,7 +10,6 @@ export default function Footer() {
     <footer className="bg-[#5C3F2F] text-white py-16">
       <div className="max-w-[1400px] mb-10 flex flex-col lg:flex-row justify-between items-left lg:items-center px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-left text-left lg:max-w-sm md:items-start w-full">
-          {" "}
           <p className="text-lg text-white text-left">
             Get 20% off your first order
           </p>
@@ -66,7 +65,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="#"
+                href="/subscriptions"
                 className="hover:text-mealprep-orange transition-colors"
               >
                 Subscriptions
