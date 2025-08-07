@@ -26,7 +26,7 @@ const OrderSummary = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm border-2 border-dashed border-[#EEEEEE]">
+    <div className="bg-white rounded-lg py-6 px-2 md:px-6 shadow-sm border-2 border-dashed border-[#EEEEEE]">
       <h2 className="text-[32px] font-semibold mb-6 font-bricolageG ">
         Order Summary
       </h2>
@@ -46,20 +46,9 @@ const OrderSummary = () => {
         <div className="flex items-center justify-between p-4 border border-[#EEEEEE] rounded-lg text-[#212121]">
           <span className="text-sm">One-time</span>
           <div className="relative">
-            <input
-              type="checkbox"
-              className="sr-only"
-              id="recurring"
-              defaultChecked
-            />
-            <label
-              htmlFor="recurring"
-              className="flex items-center cursor-pointer"
-            >
-              <div className="w-14 h-8 bg-[#FE7438] rounded-full shadow-inner relative flex items-center">
-                <div className="w-6 h-6 bg-white rounded-full shadow absolute right-0.5 "></div>
-              </div>
-            </label>
+            <div className="w-12 h-6 bg-[#FE7438] rounded-full shadow-inner relative flex items-center justify-end pr-1">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
           </div>
           <span className="text-sm">Recurring</span>
         </div>
@@ -79,36 +68,40 @@ const OrderSummary = () => {
         {meals.map((meal) => (
           <div
             key={meal.id}
-            className="flex items-center gap-4 p-4 rounded-lg text-[#4B4B4B]"
+            className="flex items-center gap-4 rounded-lg text-[#4B4B4B]"
           >
-            <div className="max-w-[92px] max-h-[100px] rounded-lg flex-shrink-0">
+            <div className="max-w-[92px] max-h-[150px] rounded-lg flex-shrink-0">
               <Image
                 src={meal.image}
                 alt={meal.name}
                 width={92}
                 height={70}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover h-[150px] min-[375px]:h-[120px] min-[400px]:h-fit"
               />
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-base mb-1">{meal.name}</h3>
-              <p className="text-sm text-[#4B4B4B]">Delivery</p>
-              <p className="font-bold text-sm text-[#4B4B4B]">
+              <h3 className="font-semibold text-sm md:text-base mb-1">
+                {meal.name}
+              </h3>
+              <div className="min-[400px]:flex min-[400px]:items-center flex-col min-[400px]:flex-row min-[400px]:justify-between">
+                <p className="text-sm text-[#4B4B4B]">Delivery</p>
+                <Button
+                  variant="ghost"
+                  className="text-sm font-dmSans underline hover:bg-transparent p-0"
+                >
+                  <Image
+                    src={"/Edit_duotone_line (1).png"}
+                    alt="pen icon"
+                    width={24}
+                    height={24}
+                  />
+                  Change Meal
+                </Button>
+              </div>
+              <p className="font-bold text-xs text-[#4B4B4B]">
                 {meal.delivery}
               </p>
             </div>
-            <Button
-              variant="ghost"
-              className="text-sm font-dmSans underline hover:bg-transparent"
-            >
-              <Image
-                src={"/Edit_duotone_line (1).png"}
-                alt="pen icon"
-                width={24}
-                height={24}
-              />
-              Change Meal
-            </Button>
           </div>
         ))}
       </div>

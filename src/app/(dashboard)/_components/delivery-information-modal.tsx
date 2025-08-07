@@ -8,25 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import ReusableInput from "./reusable-input";
-
-export interface DeliveryFormData {
-  country: string;
-  firstName: string;
-  lastName: string;
-  address: string;
-  apartment: string;
-  city: string;
-  state: string;
-  zipcode: string;
-  contactNumber: string;
-}
-
-interface DeliveryInformationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSave: (data: DeliveryFormData) => void;
-  initialData?: DeliveryFormData;
-}
+import { DeliveryInformationModalProps } from "@/lib/type";
+import { DeliveryFormData } from "@/lib/type";
 
 const DeliveryInformationModal = ({
   isOpen,
@@ -73,11 +56,11 @@ const DeliveryInformationModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto [&>button]:!hidden p-6">
-        <DialogHeader className="text-center mb-6">
-          <DialogTitle className="text-xl font-semibold text-[#212121]">
+        <DialogHeader className=" mb-6">
+          <DialogTitle className="text-center text-xl font-semibold text-[#212121]">
             Delivery Information
           </DialogTitle>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-center text-sm text-[#4B4B4B] mt-2">
             Enter your delivery information
           </p>
         </DialogHeader>

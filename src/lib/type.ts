@@ -101,3 +101,23 @@ export interface SubscriptionPlanCardProps {
   frequency: number;
   discount?: string;
 }
+
+export interface DeliveryFormData {
+  country: string;
+  firstName: string;
+  lastName: string;
+  address: string;
+  apartment: string;
+  city: string;
+  state: string;
+  zipcode: string;
+  contactNumber: string;
+}
+
+export interface DeliveryInformationModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSave: (data: DeliveryFormData) => void;
+  initialData?: DeliveryFormData;
+}
+
