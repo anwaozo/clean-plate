@@ -11,14 +11,25 @@ import { Header as NAV_ITEMS } from "../../../../cms-services/common";
 import BrandLogo, { MenuIcon } from "../../components/layouts/logo";
 import { X } from "lucide-react";
 import CartModal from "../../components/cart-modal";
+import { usePathname } from "next/navigation";
+import path from "path";
+import ProfileModal from "@/app/components/profile-modal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const hide = pathname === "dashboard";
+
+  // console.log(path)
+
+  console.log(hide);
 
   return (
     <>
@@ -31,12 +42,12 @@ const Header = () => {
                 className="flex lg:hidden h-fit border-none p-1 shadow-none"
                 onClick={toggleMenu}
               >
-                <Image
+                {/* <Image
                   src={"/quill_hamburger.png"}
                   alt="phone icon"
                   height={24}
                   width={24}
-                />
+                /> */}
               </Button>
               <BrandLogo />
             </div>
@@ -65,10 +76,12 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex items-left  justify-left gap-4">
             <MenuIcon href="" src="/icons/Search_alt_light.png" />
-            <div onClick={() => setIsCartOpen(true)}>
-              <MenuIcon src="/icons/Bag_light.png" />
+            <div onClick={() => setIsCartOpen(!isCartOpen)}>
+              <MenuIcon href="" src="/icons/Bag_light.png" />
             </div>
-            <MenuIcon href="" src="/icons/User_cicrle_light.png" />
+            <div onClick={() => setIsProfileOpen(!isProfileOpen)}>
+              <MenuIcon href="" src="/Dropdown.png" />
+            </div>
           </div>
         </div>
       </header>
@@ -79,6 +92,12 @@ const Header = () => {
         toggleMenu={toggleMenu}
       />
       <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <div>
+        <ProfileModal
+          isOpen={isProfileOpen}
+          onClose={() => setIsProfileOpen(false)}
+        />
+      </div>
     </>
   );
 };

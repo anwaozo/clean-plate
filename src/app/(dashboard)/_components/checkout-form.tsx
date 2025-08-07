@@ -5,9 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import DeliveryInformationModal, {
-  DeliveryFormData,
-} from "./delivery-information-modal";
+import DeliveryInformationModal from "./delivery-information-modal";
+import { DeliveryFormData } from "@/lib/type";
 import ReusableModal from "./reusable-modal";
 import { Textarea } from "@/components/ui/textarea";
 import AddressModal from "./address-modal";
@@ -44,7 +43,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="space-y-6 bg-white border-2 border-dashed border-[#EEEEEE] text-[#4B4B4B] font-dmSans py-6">
-      <div className="bg-white rounded-lg px-6 text-base">
+      <div className="bg-white rounded-lg px-2 md:px-6 text-base">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold">Account</h3>
           <Button variant="ghost" size="sm">
@@ -61,10 +60,13 @@ const CheckoutForm = () => {
             <p className="font-medium">Jessica Martinez</p>
             <p className="text-gray-600">jessicamartinez@gmail.com</p>
           </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-[#FE7438] text-white rounded-full flex items-center justify-center text-sm">
-              <Check className="h-3.5 w-3.5" />
-            </div>
+          <div className="flex items-center space-x-1">
+            <Image
+              src={"/icons/Check_fill.png"}
+              alt="check icon"
+              width={24}
+              height={24}
+            />
             <span className="text-sm">Email me with news and offers</span>
           </div>
         </div>
@@ -72,7 +74,7 @@ const CheckoutForm = () => {
 
       <hr className="py-2 border-t border-[#EEEEEE]" />
 
-      <div className="bg-white rounded-lg px-6 ">
+      <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="font-semibold">Delivery Information</h3>
@@ -130,7 +132,7 @@ const CheckoutForm = () => {
 
       <hr className="py-2 border-t border-[#EEEEEE]" />
 
-      <div className="bg-white rounded-lg px-6 ">
+      <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex items-center justify-between mb-4">
           <div className="space-y-2">
             <h3 className="font-semibold">Notes from store</h3>
@@ -149,7 +151,7 @@ const CheckoutForm = () => {
 
       <hr className="py-2 border-t border-[#EEEEEE]" />
 
-      <div className="bg-white rounded-lg px-6 ">
+      <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex items-center justify-between mb-4">
           <div className="space-y-2">
             <h3 className="font-semibold">Instructions for driver</h3>
@@ -168,7 +170,7 @@ const CheckoutForm = () => {
 
       <hr className="py-2 border-t border-[#EEEEEE]" />
 
-      <div className="bg-white rounded-lg px-6 ">
+      <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex space-x-2">
           <Input
             placeholder="Enter a discount code"
@@ -185,7 +187,7 @@ const CheckoutForm = () => {
 
       <hr className="py-0 border-t border-[#EEEEEE]" />
 
-      <div className="bg-white rounded-lg px-6 ">
+      <div className="bg-white rounded-lg px-2 md:px-6 ">
         <p className="text-sm mb-4">
           By placing this order, you agree to our Terms of Service and Refund
           Policy.

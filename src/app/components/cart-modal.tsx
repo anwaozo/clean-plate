@@ -1,21 +1,19 @@
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import Image from "next/image";
 import React from "react";
 
 const CartModal = ({ isOpen, onClose }: any) => {
+  if (!isOpen) return null;
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="lg:min-w-[700px] [&>button]:!hidden fixed right-1/2 top-32 translate-x-0 translate-y-0 data-[state=open]:slide-in-from-right-2 w-full">
-        <DialogHeader className="border-b border-[#EEEEEE] pb-4">
-          <DialogTitle className="font-bricolageG font-semibold text-[32px]">My Cart</DialogTitle>
-        </DialogHeader>
-        <div className="w-full min-h-[60vh] h-full py-4  text-[#4B4B4B] flex flex-col justify-between ">
+    <>
+      <div className="fixed inset-0 z-40 bg-black/20" onClick={onClose} />
+
+      <div className="fixed top-18 right-12 z-50 w-[630px] bg-white rounded-lg border shadow-lg animate-in slide-in-from-right-2 duration-300">
+        <div className="border-b border-[#EEEEEE] pb-4 p-6">
+          <h2 className="font-bricolageG font-semibold text-[32px]">My Cart</h2>
+        </div>
+        <div className="w-full min-h-[60vh] h-full py-4 text-[#4B4B4B] flex flex-col justify-between px-6">
           <div className="w-full border border-[#EEEEEE] rounded-lg p-4 flex items-center justify-between gap-4">
             <div className="border border-[#F1BC9F] rounded-lg p-2.5 w-fit">
               <Image
@@ -32,7 +30,7 @@ const CartModal = ({ isOpen, onClose }: any) => {
             <p className="bg-[#DBF4DE] px-2.5 py-1 h-fit rounded-xl text-[11px] text-[#2A8449]">
               Subscription
             </p>
-            <p className="border-b border-[#4B4B4B] text--">
+            <p className="border-b border-[#4B4B4B] text-sm">
               View Subscription
             </p>
             <div className="border-l border-[#EEEEEE] px-4 flex items-center gap-6">
@@ -69,14 +67,13 @@ const CartModal = ({ isOpen, onClose }: any) => {
             <Button
               className="w-full shadow-none hover:bg-mealprep-orange/90 px-4 py-3 h-fit"
               type="submit"
-              //   onClick={() => setOpen(false)}
             >
               Checkout
             </Button>
           </div>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </>
   );
 };
 

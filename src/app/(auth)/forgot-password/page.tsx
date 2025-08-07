@@ -1,37 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import ReusableInput from "../_components/reusable-input";
 import SectionWrapper from "../_components/section-wrapper";
-import { Input } from "@/components/ui/input";
 import ReusableButton from "../_components/reusable-button";
-import { Button } from "@/components/ui/button";
-import { ChevronRight, List } from "lucide-react";
 import Title from "../_components/title";
-
-const inputData = [
-  {
-    placeholder: "Enter your email",
-    icon: "/Message_open_light.svg",
-    label: "Email",
-    type: "email",
-    alt: "Email Icon",
-  },
-  {
-    placeholder: "Create your password",
-    icon: "/Lock_light.svg",
-    label: "New Password",
-    type: "password",
-    alt: "Password Icon",
-  },
-  {
-    placeholder: "Re-enter your password",
-    icon: "/Lock_light.svg",
-    label: "Confirm Password",
-    type: "password",
-    alt: "Password Icon",
-  },
-];
 
 const page = () => {
   return (
@@ -46,16 +17,27 @@ const page = () => {
           />
           <div>
             <div className="w-full space-y-6 font-bricolageG">
-              {inputData.map((input, index) => (
-                <ReusableInput
-                  key={index}
-                  placeholder={input.placeholder}
-                  icon={input.icon}
-                  label={input.label}
-                  type={input.type}
-                  alt={input.alt}
-                />
-              ))}
+              <ReusableInput
+                placeholder="Enter your email"
+                icon="/Message_open_light.svg"
+                label="Email"
+                type="email"
+                alt="Email Icon"
+              />
+              <ReusableInput
+                placeholder="Create your password"
+                icon="/Lock_light.svg"
+                label="New Password"
+                type="password"
+                alt="Password Icon"
+              />
+              <ReusableInput
+                placeholder="Re-enter your password"
+                icon="/Lock_light.svg"
+                label="Confirm Password"
+                type="password"
+                alt="Password Icon"
+              />
             </div>
 
             <div className="w-full mt-6">
