@@ -146,3 +146,220 @@ export const subscriptionPlans = [
     discount: "10%",
   },
 ];
+
+export const cancelReasons = [
+  { value: "too-expensive", label: "Too expensive" },
+  { value: "dont-need", label: "Don't need it anymore" },
+  { value: "poor-quality", label: "Poor food quality" },
+  { value: "delivery-issues", label: "Delivery issues" },
+  { value: "found-alternative", label: "Found better alternative" },
+  { value: "financial-issues", label: "Temporary financial issues" },
+  { value: "other", label: "Other" },
+];
+
+export const pauseOptions = [
+  { value: "1-week", label: "1 Week" },
+  { value: "2-weeks", label: "2 Weeks" },
+  { value: "1-month", label: "1 Month" },
+  { value: "2-months", label: "2 Months" },
+  { value: "3-months", label: "3 Months" },
+  { value: "indefinite", label: "Indefinite (I'll reactivate manually)" },
+];
+
+export const processingSubscriptions = [
+  {
+    subscriptionNumber: "SUBSCRIPTION 1",
+    price: "$87.00",
+    status: "Subscription",
+    statusColor: "green" as const,
+    startedDate: "8/8/2025",
+    lastUpdated: "3 mins ago",
+    showProgress: true,
+    orderStatuses: [
+      { label: "Confirmed", isActive: false, isCompleted: true },
+      { label: "Preparing", isActive: true, isCompleted: false },
+      { label: "Picked up", isActive: false, isCompleted: false },
+      { label: "On the way", isActive: false, isCompleted: false },
+      { label: "Delivered", isActive: false, isCompleted: false },
+    ],
+    meals: [
+      {
+        name: "BBQ Ranch Chicken Flatbreads",
+        image: "/Frame 126 (1).png",
+        delivery: "Delivery",
+        schedule: "Every Tuesday - 12:15pm",
+      },
+    ],
+  },
+];
+
+export const activeSubscriptions = [
+  {
+    subscriptionNumber: "SUBSCRIPTION 1",
+    price: "$87.00",
+    status: "Subscription",
+    statusColor: "green" as const,
+    startedDate: "8/8/2025",
+    lastUpdated: "No order processing",
+    meals: [
+      {
+        name: "BBQ Ranch Chicken Flatbreads",
+        image: "/Frame 126 (1).png",
+        delivery: "Delivery",
+        schedule: "Every Tuesday - 12:15pm",
+      },
+      {
+        name: "Spicy Tofu Stir-Fry",
+        image: "/Frame 126 (2).png",
+        delivery: "Delivery",
+        schedule: "Every Wednesday - 12:15pm",
+      },
+      {
+        name: "Fried pork cutlet curry with rice",
+        image: "/Frame 126 (3).png",
+        delivery: "Delivery",
+        schedule: "Every Thursday - 12:15pm",
+      },
+    ],
+    actions: {
+      primary: {
+        label: "Cancel",
+        onClick: () => console.log("Cancel subscription"),
+      },
+      secondary: {
+        label: "Pause",
+        onClick: () => console.log("Pause subscription"),
+      },
+      additional: {
+        label: "Edit",
+        onClick: () => console.log("Edit subscription"),
+      },
+    },
+  },
+  {
+    subscriptionNumber: "SUBSCRIPTION 2",
+    price: "$87.00",
+    status: "One-off",
+    statusColor: "green" as const,
+    startedDate: "8/8/2025",
+    orderCount: 5,
+    lastUpdated: "No order processing",
+    meals: [],
+    actions: {
+      primary: {
+        label: "View Subscription",
+        onClick: () => console.log("View subscription"),
+      },
+    },
+  },
+];
+
+export const pausedSubscriptions = [
+  {
+    subscriptionNumber: "SUBSCRIPTION 1",
+    price: "$87.00",
+    status: "Paused",
+    statusColor: "red" as const,
+    startedDate: "8/8/2025",
+    lastUpdated: "No order processing",
+    meals: [
+      {
+        name: "BBQ Ranch Chicken Flatbreads",
+        image: "/Frame 126 (1).png",
+        delivery: "Delivery",
+        schedule: "Every Tuesday - 12:15pm",
+      },
+      {
+        name: "Spicy Tofu Stir-Fry",
+        image: "/Frame 126 (2).png",
+        delivery: "Delivery",
+        schedule: "Every Wednesday - 12:15pm",
+      },
+      {
+        name: "Fried pork cutlet curry with rice",
+        image: "/Frame 126 (3).png",
+        delivery: "Delivery",
+        schedule: "Every Thursday - 12:15pm",
+      },
+    ],
+    actions: {
+      primary: {
+        label: "Reactivate",
+        onClick: () => console.log("Reactivate subscription"),
+      },
+      secondary: {
+        label: "Cancel",
+        onClick: () => console.log("Cancel subscription"),
+      },
+    },
+  },
+  {
+    subscriptionNumber: "SUBSCRIPTION 2",
+    price: "$87.00",
+    status: "Paused",
+    statusColor: "red" as const,
+    startedDate: "8/8/2025",
+    orderCount: 5,
+    lastUpdated: "No order processing",
+    meals: [],
+    actions: {
+      primary: {
+        label: "View Subscription",
+        onClick: () => console.log("View subscription"),
+      },
+    },
+  },
+];
+
+export const canceledSubscriptions = [
+  {
+    subscriptionNumber: "SUBSCRIPTION 1",
+    price: "$87.00",
+    status: "Canceled",
+    statusColor: "gray" as const,
+    startedDate: "8/8/2025",
+    lastUpdated: "No order processing",
+    meals: [
+      {
+        name: "BBQ Ranch Chicken Flatbreads",
+        image: "/Frame 126 (1).png",
+        delivery: "Delivery",
+        schedule: "Every Tuesday - 12:15pm",
+      },
+      {
+        name: "Spicy Tofu Stir-Fry",
+        image: "/Frame 126 (2).png",
+        delivery: "Delivery",
+        schedule: "Every Wednesday - 12:15pm",
+      },
+      {
+        name: "Fried pork cutlet curry with rice",
+        image: "/Frame 126 (3).png",
+        delivery: "Delivery",
+        schedule: "Every Thursday - 12:15pm",
+      },
+    ],
+    actions: {
+      primary: {
+        label: "Reactivate",
+        onClick: () => console.log("Reactivate subscription"),
+      },
+    },
+  },
+  {
+    subscriptionNumber: "SUBSCRIPTION 2",
+    price: "$87.00",
+    status: "Canceled",
+    statusColor: "gray" as const,
+    startedDate: "8/8/2025",
+    orderCount: 5,
+    lastUpdated: "No order processing",
+    meals: [],
+    actions: {
+      primary: {
+        label: "View Subscription",
+        onClick: () => console.log("View subscription"),
+      },
+    },
+  },
+];

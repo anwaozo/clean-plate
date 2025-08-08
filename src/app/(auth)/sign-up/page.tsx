@@ -19,7 +19,6 @@ const page = () => {
             title="Create new account"
             text="Already have an account?"
             href="/sign-in"
-           
             hrefText="Sign in"
           />
           <div>
@@ -65,7 +64,9 @@ const page = () => {
           </div>
 
           <div className="space-y-4">
-            <ReusableButton text="Create my account" />
+            <Link href={"/verify"}>
+              <ReusableButton text="Create my account" />
+            </Link>
             <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-2 h-fit shadow-none">
               <Image
                 src={"/Google logo.svg"}

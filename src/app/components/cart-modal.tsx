@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CartModal = ({ isOpen, onClose }: any) => {
@@ -63,13 +64,14 @@ const CartModal = ({ isOpen, onClose }: any) => {
             <p className="italic">
               Taxes, discounts and shipping calculated at checkout
             </p>
-
-            <Button
-              className="w-full shadow-none hover:bg-mealprep-orange/90 px-4 py-3 h-fit"
-              type="submit"
-            >
-              Checkout
-            </Button>
+            <Link onClick={() => onClose(false)} href={"/checkout"}>
+              <Button
+                className="w-full shadow-none hover:bg-mealprep-orange/90 px-4 py-3 h-fit"
+                type="submit"
+              >
+                Checkout
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

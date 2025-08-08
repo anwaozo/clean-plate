@@ -42,12 +42,12 @@ const Header = () => {
                 className="flex lg:hidden h-fit border-none p-1 shadow-none"
                 onClick={toggleMenu}
               >
-                {/* <Image
-                  src={"/quill_hamburger.png"}
+                <Image
+                  src={"/Status_list.png"}
                   alt="phone icon"
                   height={24}
                   width={24}
-                /> */}
+                />
               </Button>
               <BrandLogo />
             </div>
