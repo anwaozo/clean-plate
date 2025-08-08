@@ -4,9 +4,9 @@ import LoyaltyPointsPage from "../_components/loyalty-points";
 
 const page = () => {
   return (
-    <div className="">
+    <div className=" ">
       <Title text="Loyalty Points" />
-      <div className="bg-[#F8F7F2] py-10 px-4 min-h-screen flex items-center justify-center">
+      <div className="bg-[#F8F7F2] py-10 px-4  flex items-center justify-center">
         <LoyaltyPointsPage />
       </div>
     </div>

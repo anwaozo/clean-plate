@@ -5,16 +5,16 @@ import React from "react";
 const CheckoutBreadcrumb = () => {
   return (
     <>
-      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-[#4B4B4B] py-6">
-        <span>Meal Prep</span>
+      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm   py-6">
+        <span className="text-bold">Meal Prep</span>
         <ChevronRight className="w-4 h-4" />
         <span>Standard Plan</span>
         <ChevronRight className="w-4 h-4" />
         <span>Checkout</span>
       </div>
-      <hr className="py-2 border-t border-[#E1E1E1]" />
+      <hr className=" border-t border-[#E1E1E1]" />
 
-      <div className="flex items-center justify-start md:justify-center gap-4 mb-8 overflow-x-auto scrollbar-hide pb-2 px-4">
+      <div className="flex items-center  border-b border-[#E1E1E1] justify-start md:justify-center gap-4 overflow-x-auto scrollbar-hide py-4 px-4">
         <div className="flex items-center flex-shrink-0">
           <div className="w-6 h-6">
             <Image
@@ -29,7 +29,7 @@ const CheckoutBreadcrumb = () => {
           </span>
         </div>
 
-        <div className="w-16 md:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
+        <div className="w-5  lg:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
 
         <div className="flex items-center flex-shrink-0">
           <div className="w-6 h-6">
@@ -45,7 +45,7 @@ const CheckoutBreadcrumb = () => {
           </span>
         </div>
 
-        <div className="w-16 md:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
+        <div className="w-5  lg:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
 
         <div className="flex items-center flex-shrink-0">
           <div className="w-6 h-6">
@@ -56,7 +56,7 @@ const CheckoutBreadcrumb = () => {
               height={24}
             />
           </div>
-          <span className="ml-2 text-xs md:text-sm text-[#4B4B4B] whitespace-nowrap">
+          <span className="ml-2 text-xs md:text-sm text-[#CACACA] whitespace-nowrap">
             Make Payment
           </span>
         </div>

@@ -13,6 +13,7 @@ const page = () => {
             title="Forgot password"
             text="Enter your email and set a new password to continue."
             href=""
+            centerText
             hrefText=""
           />
           <div>
