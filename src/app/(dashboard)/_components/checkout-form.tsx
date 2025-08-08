@@ -10,6 +10,7 @@ import { DeliveryFormData } from "@/lib/type";
 import ReusableModal from "./reusable-modal";
 import { Textarea } from "@/components/ui/textarea";
 import AddressModal from "./address-modal";
+import Link from "next/link";
 
 const CheckoutForm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,14 +39,14 @@ const CheckoutForm = () => {
 
   const handleDeliverySave = (data: DeliveryFormData) => {
     setDeliveryData(data);
-    console.log("Delivery Information:", data);
+    // console.log("Delivery Information:", data);
   };
 
   return (
-    <div className="space-y-6 bg-white border-2 border-dashed border-[#EEEEEE] text-[#4B4B4B] font-dmSans py-6">
+    <div className="space-y-4 bg-white border-2 border-dashed border-[#EEEEEE] text-[#4B4B4B] font-dmSans py-6">
       <div className="bg-white rounded-lg px-2 md:px-6 text-base">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold">Account</h3>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="font-bold">Account</h3>
           <Button variant="ghost" size="sm">
             <Image
               src={"/Sign_out_squre_light.png"}
@@ -72,12 +73,12 @@ const CheckoutForm = () => {
         </div>
       </div>
 
-      <hr className="py-2 border-t border-[#EEEEEE]" />
+      <hr className="py-1 border-t border-[#EEEEEE]" />
 
       <div className="bg-white rounded-lg px-2 md:px-6 ">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-2">
           <div>
-            <h3 className="font-semibold">Delivery Information</h3>
+            <h3 className="font-bold">Delivery Information</h3>
             {deliveryData && isDeliveryFormFilled(deliveryData) ? (
               <div className="mt-2 text-sm">
                 <p className="text-gray-600">
@@ -135,7 +136,7 @@ const CheckoutForm = () => {
       <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex items-center justify-between mb-4">
           <div className="space-y-2">
-            <h3 className="font-semibold">Notes from store</h3>
+            <h3 className="font-bold">Notes from store</h3>
             <p>No notes</p>
           </div>
           <Image
@@ -154,7 +155,7 @@ const CheckoutForm = () => {
       <div className="bg-white rounded-lg px-2 md:px-6 ">
         <div className="flex items-center justify-between mb-4">
           <div className="space-y-2">
-            <h3 className="font-semibold">Instructions for driver</h3>
+            <h3 className="font-bold">Instructions for driver</h3>
             <p>No notes</p>
           </div>
           <Image
@@ -174,11 +175,11 @@ const CheckoutForm = () => {
         <div className="flex space-x-2">
           <Input
             placeholder="Enter a discount code"
-            className="flex-1 border-[#E1E1E1] shadow-none h-fit py-3"
+            className="flex-1 border-[#E1E1E1] shadow-none h-fit py-2"
           />
           <Button
             variant="outline"
-            className="bg-[#CACACA] text-white h-fit py-3 rounded-lg shadow-none"
+            className="bg-[#CACACA] text-white h-fit py-2 rounded-lg shadow-none"
           >
             Redeem
           </Button>
@@ -192,16 +193,17 @@ const CheckoutForm = () => {
           By placing this order, you agree to our Terms of Service and Refund
           Policy.
         </p>
-
-        <Button className="w-full bg-[#212121] hover:bg-[#212121]/90 text-white py-2 h-fit mb-4 font-semibold">
-          Confirm order and Pay with{" "}
-          <Image
-            src={"/logos_stripe.svg"}
-            alt="Stripe logo"
-            width={60}
-            height={24}
-          />
-        </Button>
+        <Link href={"/successful"}>
+          <Button className="w-full bg-[#212121] hover:bg-[#212121]/90 text-white py-2 h-fit mb-4 font-bold">
+            Confirm order and Pay with{" "}
+            <Image
+              src={"/logos_stripe.svg"}
+              alt="Stripe logo"
+              width={60}
+              height={24}
+            />
+          </Button>
+        </Link>
 
         <div className="flex items-center justify-center space-x-2 text-xs text-gray-500">
           <Image
@@ -230,7 +232,7 @@ const CheckoutForm = () => {
         description="Enter all information you have for our store"
       >
         <div className="space-y-2 ">
-          <label className="block text-sm font-semibold text-[#212121]">
+          <label className="block text-sm font-bold text-[#212121]">
             Notes
           </label>
           <Textarea
@@ -247,7 +249,7 @@ const CheckoutForm = () => {
         description="Enter all information you have for delivery personnel"
       >
         <div className="space-y-2 ">
-          <label className="block text-sm font-semibold text-[#212121]">
+          <label className="block text-sm font-bold text-[#212121]">
             Instruction
           </label>
           <Textarea

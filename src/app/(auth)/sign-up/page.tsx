@@ -13,12 +13,13 @@ import Title from "../_components/title";
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-[100vh] flex flex-col items-center justify-center px-4 lg:px-6 py-6 ">
-        <div className="bg-white rounded-lg px-8 py-8 shadow-2xl max-w-md w-full space-y-10 h-fit">
+      <div className=" h-[100%] lg:h-[100vh] flex flex-col lg:items-center lg:justify-center  px-4 lg:px-2 py-6 ">
+        <div className="bg-white rounded-lg px-6 py-8 shadow-2xl max-w-lg w-full space-y-10 ">
           <Title
             title="Create new account"
             text="Already have an account?"
             href="/sign-in"
+           
             hrefText="Sign in"
           />
           <div>

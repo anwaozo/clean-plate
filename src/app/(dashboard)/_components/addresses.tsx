@@ -68,13 +68,13 @@ const Addresses = ({ addresses }: AddressesProps) => {
               <div>
                 <Button
                   variant="outline"
-                  className="h-fit py-2.5 px-5 rounded-[10px] text-[#4B4B4B] border-[#CACACA] hover:bg-gray-50"
+                  className="h-fit  px-4 rounded-[10px] text-[#4B4B4B] border-[#CACACA] bg-transparent hover:bg-gray-50"
                 >
                   <Image
                     src={"/Edit_duotone_line (1).png"}
                     alt="Location Icon"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                   />
                   Edit
                 </Button>

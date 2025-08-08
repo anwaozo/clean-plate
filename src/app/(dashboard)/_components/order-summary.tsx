@@ -27,7 +27,7 @@ const OrderSummary = () => {
 
   return (
     <div className="bg-white rounded-lg py-6 px-2 md:px-6 shadow-sm border-2 border-dashed border-[#EEEEEE]">
-      <h2 className="text-[32px] font-semibold mb-6 font-bricolageG ">
+      <h2 className="text-2xl lg:3xl font-semibold mb-6 font-bricolageG ">
         Order Summary
       </h2>
 
@@ -57,7 +57,7 @@ const OrderSummary = () => {
       <div className="mb-6">
         <Button
           variant="outline"
-          className="w-full justify-start text-[#878787] py-4 h-fit shadow-none"
+          className="w-full justify-start text-[#878787] py-2 h-fit shadow-none"
         >
           <Calendar className="w-4 h-4 mr-2" />
           Select a start date
@@ -87,7 +87,7 @@ const OrderSummary = () => {
                 <p className="text-sm text-[#4B4B4B]">Delivery</p>
                 <Button
                   variant="ghost"
-                  className="text-sm font-dmSans underline hover:bg-transparent p-0"
+                  className="text-sm font-dmSans hidden lg:flex underline hover:bg-transparent p-0"
                 >
                   <Image
                     src={"/Edit_duotone_line (1).png"}
@@ -101,6 +101,19 @@ const OrderSummary = () => {
               <p className="font-bold text-xs text-[#4B4B4B]">
                 {meal.delivery}
               </p>
+                <Button
+                  variant="ghost"
+                  className="text-sm font-dmSans flex lg:hidden bunderline hover:bg-transparent p-0"
+                >
+                  <Image
+                    src={"/Edit_duotone_line (1).png"}
+                    alt="pen icon"
+                    width={24}
+                    height={24}
+                  />
+                  Change Meal
+                </Button>
+
             </div>
           </div>
         ))}

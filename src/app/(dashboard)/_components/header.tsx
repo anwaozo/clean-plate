@@ -71,8 +71,13 @@ const Header = () => {
           </div>
           <div className="flex lg:hidden items-center  justify-center gap-2">
             {/* <MenuIcon href="" src="/icons/Search_alt_light.png" /> */}
-            <MenuIcon href="" src="/icons/Bag_light.png" />
-            <MenuIcon href="" src="/icons/User_cicrle_light.png" />
+            {/* <MenuIcon href="" src="/icons/Bag_light.png" /> */}
+            <div onClick={() => setIsCartOpen(!isCartOpen)}>
+              <MenuIcon href="" src="/icons/Bag_light.png" />
+            </div>
+            <div onClick={() => setIsProfileOpen(!isProfileOpen)}>
+              <MenuIcon href="" src="/Dropdown.png" />
+            </div>
           </div>
           <div className="hidden lg:flex items-left  justify-left gap-4">
             <MenuIcon href="" src="/icons/Search_alt_light.png" />
