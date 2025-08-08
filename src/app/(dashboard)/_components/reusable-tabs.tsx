@@ -13,7 +13,7 @@ interface ReusableTabsProps {
 
 const ReusableTabs = ({ tabs, tabsData }: ReusableTabsProps) => {
   return (
-    <div className=" w-full  h-[100vh]">
+    <div className=" w-full min-h-[100vh]">
       <Tabs className="p-0" defaultValue={tabs[0]}>
         <TabsList className="w-full gap-2 bg-white py-10">
           <div className="max-w-[1280px] mx-auto w-full flex items-center justify-start gap-2 overflow-x-auto scrollbar-hide">

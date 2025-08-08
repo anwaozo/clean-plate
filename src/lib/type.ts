@@ -121,3 +121,28 @@ export interface DeliveryInformationModalProps {
   initialData?: DeliveryFormData;
 }
 
+interface MealItem {
+  name: string;
+  image: string;
+  delivery: string;
+  schedule: string;
+}
+
+export interface SubscriptionCardProps {
+  subscriptionNumber: string;
+  price: string;
+  status: string;
+  statusColor: "orange" | "green" | "red" | "gray";
+  startedDate: string;
+  orderCount?: number;
+  lastUpdated: string;
+  meals?: MealItem[];
+  showProgress?: boolean;
+  orderStatuses?: { label: string; isActive: boolean; isCompleted: boolean }[];
+  actions?: {
+    primary?: { label: string; onClick: () => void };
+    secondary?: { label: string; onClick: () => void };
+    additional?: { label: string; onClick: () => void };
+  };
+  onEditClick?: () => void;
+}

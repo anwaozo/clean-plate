@@ -17,6 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProductCard from "./product-card";
 import { MEALS } from "@/lib/data";
+import Link from "next/link";
 
 export default function BestsellersSection() {
   return (
@@ -55,9 +56,11 @@ export default function BestsellersSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <Button className="mt-12 bg-primary text-white px-8 py-6 text-md rounded-lg hover:bg-mealprep-orange/90 transition-colors">
-          Discover our menu
-        </Button>
+        <Link href={"/browse-meals"}>
+          <Button className="mt-12 bg-primary text-white px-8 py-6 text-md rounded-lg hover:bg-mealprep-orange/90 transition-colors">
+            Discover our menu
+          </Button>
+        </Link>
       </div>
     </section>
   );

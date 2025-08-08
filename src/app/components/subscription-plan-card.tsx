@@ -22,7 +22,9 @@ const SubscriptionPlanCard = ({
       <Button
         onClick={() =>
           router.push(
-            `/subscriptions/${plan.name.replace(/\s+/g, "-").toLowerCase()}`
+            `/subscription-plans/${plan.name
+              .replace(/\s+/g, "-")
+              .toLowerCase()}`
           )
         }
         className="mt-12 leading-0 bg-primary text-white px-6 py-6 text-md hover:bg-mealprep-orange/90 transition-colors flex flex-col items-center justify-center gap-0"

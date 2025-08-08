@@ -35,7 +35,7 @@ const profileRoutes = [
       {
         name: "Chat with Customer Service",
         icon: "/icons/Chat_alt_2_fill.png",
-        link: "/customer-service",
+        link: "/chat",
       },
       {
         name: "Privacy Policy",

@@ -42,15 +42,19 @@ const HeroSection = () => {
               wholesome food made for you.
             </p>
             <div className="flex flex-col w-full sm:flex-row justify-center items-center gap-4">
-              <Button className="bg-primary w-full lg:w-[250px]  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
-                Explore Meals
-              </Button>
-              <Button
-                variant="secondary"
-                className="bg-white w-full lg:w-[250px]  text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Button>
+              <Link href={"/browse-meals"}>
+                <Button className="bg-primary w-full lg:w-[250px]  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
+                  Explore Meals
+                </Button>
+              </Link>
+              <Link href={"/sign-up"}>
+                <Button
+                  variant="secondary"
+                  className="bg-white w-full lg:w-[250px]  text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

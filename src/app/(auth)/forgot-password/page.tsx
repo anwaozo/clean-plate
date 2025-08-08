@@ -3,6 +3,7 @@ import ReusableInput from "../_components/reusable-input";
 import SectionWrapper from "../_components/section-wrapper";
 import ReusableButton from "../_components/reusable-button";
 import Title from "../_components/title";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -53,7 +54,9 @@ const page = () => {
           </div>
 
           <div className="space-y-4">
-            <ReusableButton text="Continue" />
+            <Link href={"/2fa"}>
+              <ReusableButton text="Continue" />
+            </Link>
           </div>
         </div>
       </div>
