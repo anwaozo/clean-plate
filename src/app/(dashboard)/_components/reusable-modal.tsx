@@ -47,13 +47,13 @@ const ReusableModal = ({
           <Button
             variant="outline"
             onClick={onClose}
-            className="flex-1 h-12 border-gray-300 text-gray-700 hover:bg-gray-50"
+            className="flex-1  border-gray-300 text-gray-700 hover:bg-gray-50"
           >
             {cancelText}
           </Button>
           <Button
             onClick={onSave || onClose}
-            className="flex-1 h-12 bg-[#FE7438] hover:bg-orange-600 text-white"
+            className="flex-1  bg-[#FE7438] hover:bg-orange-600 text-white"
           >
             {saveText}
           </Button>

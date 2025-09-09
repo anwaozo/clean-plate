@@ -29,13 +29,15 @@ const Header = () => {
           <span className="text-center text-xs">
             You'll get 2 free meals on your first subscription
           </span>
-          <Button
-            variant="secondary"
-            size="sm"
-            className="bg-primary text-white rounded-full hover:bg-gray-100"
-          >
-            Signup
-          </Button>
+          <Link href="/sign-up" >
+            <Button
+              variant="secondary"
+              size="sm"
+              className="bg-primary text-white rounded-full hover:bg-gray-100"
+            >
+              Signup
+            </Button>
+          </Link>
         </div>
 
         <Button

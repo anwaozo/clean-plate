@@ -36,7 +36,7 @@ const ReusableInput = ({
           {label} {required && <span className="text-red-500">*</span>}
         </label>
         <Select value={value} onValueChange={onChange}>
-          <SelectTrigger className="w-full h-12 border-[#EEEEEE] focus:ring-[#EEEEEE]/60 shadow-none">
+          <SelectTrigger className="w-full  border-[#EEEEEE] focus:ring-[#EEEEEE]/60 shadow-none">
             <SelectValue placeholder={placeholder} />
           </SelectTrigger>
           <SelectContent>
@@ -61,7 +61,7 @@ const ReusableInput = ({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange?.(e.target.value)}
-        className="h-12 border-[#EEEEEE] focus:ring-[#EEEEEE]/60 placeholder:text-gray-400 shadow-none"
+        className=" border-[#EEEEEE] focus:ring-[#EEEEEE]/60 placeholder:text-gray-400 shadow-none"
       />
     </div>
   );

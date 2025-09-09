@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function MealPlanningSection() {
   return (
@@ -105,9 +106,11 @@ export default function MealPlanningSection() {
           </div>
         </div>
         <div className="text-center mt-12">
-          <Button className="bg-primary text-white px-8 py-6 text-md rounded-lg hover:bg-primary ">
-            Choose a Plan
-          </Button>
+          <Link href={"/subscription-plans"}>
+            <Button className="bg-primary text-white px-8 py-6 text-md rounded-lg hover:bg-primary ">
+              Choose a Plan
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
