@@ -29,7 +29,7 @@ const MealDetail = ({
     <div className="max-w-[1280px] mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row py-4 gap-6 px-2 md:lg-6 border-2 border-dashed border-[#EEEEEE] bg-white">
         <MealImage image={image} alt={alt} />
-        <div className="space-y-2 max-w-[640px]">
+        <div className="space-y-6 max-w-[640px]">
           <div className="flex flex-wrap gap-2 mb-2">
             {badges.map((badge, index) => (
               <Badge
@@ -45,7 +45,7 @@ const MealDetail = ({
               </Badge>
             ))}
           </div>
-          <p className="font-semibold text-xl md:text-2xl lg:text-[32px]">
+          <p className="font-semibold font-bricolageG text-xl md:text-2xl lg:text-[32px]">
             {title}
           </p>
           <p>{fullDescription}</p>
@@ -72,7 +72,7 @@ const MealDetail = ({
           <div className="flex min-[375px]:items-center flex-col min-[375px]:flex-row gap-4">
             <Button
               variant={"outline"}
-              className="flex items-center border-[#2A8449] px-[16px] py-[10px] h-fit rounded-[10px]  hover:bg-transparent"
+              className="flex items-center border-[#2A8449] px-[16px] py-6 rounded-[10px]  hover:bg-transparent"
             >
               <div className="border border-[#878787] w-5 h-5 lg:w-[26px] lg:h-[26px] flex justify-center items-center rounded-[4px] text-[#878787] text-2xl font-normal">
                 -
@@ -82,7 +82,7 @@ const MealDetail = ({
                 +
               </span>
             </Button>
-            <Button className=" bg-[#2A8449] px-[40px] py-[13.5px] h-fit text-white hover:bg-green-button/90 rounded-lg">
+            <Button className=" bg-[#2A8449] px-[40px] py-6 text-white hover:bg-green-button/90 rounded-lg">
               Add to cart
             </Button>
           </div>

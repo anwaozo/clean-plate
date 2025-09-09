@@ -4,7 +4,7 @@ export const MEALS = [
     image: "/Frame 126.png",
     alt: "Grilled Chicken & Quinoa Bowl",
     badges: [
-      { text: "Family Friendly", color: "bg-[#4B4B4B] text-white" },
+      { text: "Family Friendly", color: "bg-foreground text-white" },
       { text: "Contains Allergen", color: "bg-[#E7D8D4] text-[#C73007]" },
     ],
     title: "Grilled Chicken & Quinoa Bowl",

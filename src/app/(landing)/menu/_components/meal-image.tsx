@@ -9,7 +9,13 @@ interface MealImageProps {
 const MealImage = ({ image, alt }: MealImageProps) => {
   return (
     <div className="h-full w-full">
-      <Image src={image} alt={alt} width={1000} height={1000} className="w-full h-full object-cover" />
+      <Image
+        src={image}
+        alt={alt}
+        width={1000}
+        height={1000}
+        className="w-full h-full object-cover"
+      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "../_components/title";
-import Profile from "../_components/profile";
+import Title from "../../_components/title";
+import Profile from "../../_components/profile";
 
 const page = () => {
   return (
