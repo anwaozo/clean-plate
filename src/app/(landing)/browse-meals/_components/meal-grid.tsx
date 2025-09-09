@@ -14,7 +14,7 @@ export default function MealGrid({ meals }: MealGridProps) {
         ))}
       </div>
       <div className="text-center mt-12">
-        <Button className="bg-mealprep-orange text-white px-8 py-6 text-lg rounded-lg hover:bg-mealprep-orange/90 transition-colors">
+        <Button className="bg-primary text-white px-8 py-4 text-sm rounded-lg hover:bg-mealprep-orange/90 transition-colors">
           Load more
         </Button>
       </div>

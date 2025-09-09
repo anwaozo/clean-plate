@@ -13,7 +13,7 @@ import Title from "../_components/title";
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-[100vh] flex flex-col items-center justify-center  px-4 lg:px-6 py-12 ">
+      <div className="lg:h-[100vh] flex flex-col items-center justify-center  px-4 lg:px-6 py-12 ">
         <div className="bg-white rounded-lg px-6 py-8 shadow-lg max-w-md w-full  space-y-10 h-fit ">
           <Title
             title="Sign in"

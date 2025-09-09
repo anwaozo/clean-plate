@@ -10,42 +10,11 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Title from "../_components/title";
 
-const inputData = [
-  {
-    placeholder: "Enter your name",
-    icon: "/User_cicrle_light.svg",
-    label: "Full Name",
-    type: "text",
-    alt: "Name Icon",
-  },
-  {
-    placeholder: "Enter your email",
-    icon: "/Message_open_light.svg",
-    label: "Email",
-    type: "email",
-    alt: "Email Icon",
-  },
-  {
-    placeholder: "Enter your number",
-    icon: "/Phone_light.svg",
-    label: "Phone Number",
-    type: "tel",
-    alt: "Phone Icon",
-  },
-  {
-    placeholder: "Enter your password",
-    icon: "/Lock_light.svg",
-    label: "Password",
-    type: "password",
-    alt: "Password Icon",
-  },
-];
-
 const page = () => {
   return (
     <SectionWrapper>
-      <div className="h-[100vh] flex flex-col items-center justify-center px-4 lg:px-6 py-6 ">
-        <div className="bg-white rounded-lg px-8 py-8 shadow-2xl max-w-md w-full space-y-10 h-fit">
+      <div className=" h-[100%] lg:h-[100vh] flex flex-col lg:items-center lg:justify-center  px-4 lg:px-2 py-6 ">
+        <div className="bg-white rounded-lg px-6 py-8 shadow-2xl max-w-lg w-full space-y-10 ">
           <Title
             title="Create new account"
             text="Already have an account?"
@@ -55,27 +24,35 @@ const page = () => {
           <div>
             <div className="w-full space-y-6 ">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {inputData.slice(0, 2).map((input, index) => (
-                  <ReusableInput
-                    key={index}
-                    placeholder={input.placeholder}
-                    icon={input.icon}
-                    label={input.label}
-                    type={input.type}
-                    alt={input.alt}
-                  />
-                ))}
-              </div>
-              {inputData.slice(2).map((input, index) => (
                 <ReusableInput
-                  key={index + 2}
-                  placeholder={input.placeholder}
-                  icon={input.icon}
-                  label={input.label}
-                  type={input.type}
-                  alt={input.alt}
+                  placeholder="Enter your name"
+                  icon="/User_cicrle_light.svg"
+                  label="Full Name"
+                  type="text"
+                  alt="Name Icon"
                 />
-              ))}
+                <ReusableInput
+                  placeholder="Enter your email"
+                  icon="/Message_open_light.svg"
+                  label="Email"
+                  type="email"
+                  alt="Email Icon"
+                />
+              </div>
+              <ReusableInput
+                placeholder="Enter your number"
+                icon="/Phone_light.svg"
+                label="Phone Number"
+                type="tel"
+                alt="Phone Icon"
+              />
+              <ReusableInput
+                placeholder="Enter your password"
+                icon="/Lock_light.svg"
+                label="Password"
+                type="password"
+                alt="Password Icon"
+              />
             </div>
 
             <div className="w-full flex items-center mt-4">
@@ -87,7 +64,9 @@ const page = () => {
           </div>
 
           <div className="space-y-4">
-            <ReusableButton text="Create my account" />
+            <Link href={"/verify"}>
+              <ReusableButton text="Create my account" />
+            </Link>
             <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-2 h-fit shadow-none">
               <Image
                 src={"/Google logo.svg"}

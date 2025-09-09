@@ -12,6 +12,7 @@ import Image from "next/image";
 import { MenuIcon } from "./layouts/logo";
 import { Warning } from "postcss";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface ProductProps {
   image: string;
@@ -27,21 +28,22 @@ const ProductCard = ({ meal }: { meal: ProductProps }) => {
   return (
     <Card className="w-full h-[400px] lg:h-[544px] rounded-xl p-2 shadow-lg border-2 border-gray-200 border-dashed border-dash-wide ">
       <CardHeader className="p-0 relative w-full h-40 lg:h-80">
-        <Link href={`/menu/${meal.title.toLowerCase().replace(/\s+/g, "-")}`}>
-          <Image
-            src={meal.image || "/placeholder.svg"}
-            alt={meal.alt}
-            fill
-            className="rounded-t-xl object-cover "
-          />
-        </Link>
+        <Image
+          src={meal.image || "/placeholder.svg"}
+          alt={meal.alt}
+          fill
+          className="rounded-t-xl object-cover "
+        />
       </CardHeader>
       <CardContent className="p-4">
         <div className="flex flex-wrap gap-2 mb-2">
           {meal.badges.map((badge, index) => (
             <Badge
               key={index}
-              className={`${badge.color} text-xs font-medium px-5 py-0 m rounded-lg`}
+              className={cn(
+                "text-xs font-medium px-5 py-0 m rounded-lg",
+                badge?.color
+              )}
             >
               <div className="flex justify-center items-center gap-1 shadow-sm">
                 {badge.text}{" "}
@@ -52,9 +54,11 @@ const ProductCard = ({ meal }: { meal: ProductProps }) => {
             </Badge>
           ))}
         </div>
-        <h3 className="text-lg text-left font-semibold text-[#4B4B4B] mb-2">
-          {meal.title}
-        </h3>
+        <Link className="hover:underline" href={`/menu/${meal.title.toLowerCase().replace(/\s+/g, "-")}`}>
+          <h3 className="text-lg text-left font-semibold text-[#4B4B4B] mb-2">
+            {meal.title}
+          </h3>
+        </Link>
         <p className="text-sm lg:text-md text-left text-[#4B4B4B] mb-4 line-clamp-2">
           {meal.description.split(" ").slice(0, 10).join(" ")}...
         </p>

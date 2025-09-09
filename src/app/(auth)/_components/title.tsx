@@ -19,7 +19,7 @@ const Title = ({
   return (
     <div className="flex flex-col items-center space-y-3 mb-10">
       <Image src={"/Logo 4.svg"} alt="Logo" width={24} height={24} />
-      <h3 className="text-[#0A0A0A] text-[32px] font-semibold font-bricolageG leading-10">
+      <h3 className="text-[#0A0A0A] text-2xl lg:text-3xl font-semibold font-bricolageG leading-10">
         {title}
       </h3>
       <p
