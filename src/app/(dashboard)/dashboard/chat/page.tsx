@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import ChatSidebar from "../_components/chat-sidebar";
-import ChatWindow from "../_components/chat-window";
+import ChatSidebar from "../../_components/chat-sidebar";
+import ChatWindow from "../../_components/chat-window";
 
 const page = () => {
   const [selectedChatId, setSelectedChatId] = useState<string | null>(null);

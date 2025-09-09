@@ -9,27 +9,24 @@ import { useState } from "react";
 
 import { Header as NAV_ITEMS } from "../../../../cms-services/common";
 import BrandLogo, { MenuIcon } from "../../components/layouts/logo";
-import { X } from "lucide-react";
-import CartModal from "../../components/cart-modal";
+import CartModal, { MobileCartModal } from "../../components/cart-modal";
 import { usePathname } from "next/navigation";
-import path from "path";
-import ProfileModal from "@/app/components/profile-modal";
+import ProfileModal, {
+  MobileProfileModal,
+} from "@/app/components/profile-modal";
 
-const Header = () => {
+const DashHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState({
+    desktop: false,
+    mobile: false,
+  });
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const pathname = usePathname();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const hide = pathname === "dashboard";
-
-  // console.log(path)
-
-  console.log(hide);
 
   return (
     <>
@@ -72,21 +69,28 @@ const Header = () => {
           <div className="flex lg:hidden items-center  justify-center gap-2">
             {/* <MenuIcon href="" src="/icons/Search_alt_light.png" /> */}
             {/* <MenuIcon href="" src="/icons/Bag_light.png" /> */}
-            <div onClick={() => setIsCartOpen(!isCartOpen)}>
+            <div
+              onClick={() =>
+                setIsCartOpen({ ...isCartOpen, mobile: !isCartOpen.mobile })
+              }
+            >
               <MenuIcon href="" src="/icons/Bag_light.png" />
             </div>
-            <div onClick={() => setIsProfileOpen(!isProfileOpen)}>
+            <div onClick={() => setIsProfileOpen(false)}>
               <MenuIcon href="" src="/Dropdown.png" />
             </div>
           </div>
-          <div className="hidden lg:flex items-left  justify-left gap-4">
+          <div className="hidden lg:flex items-center  justify-center gap-4">
             <MenuIcon href="" src="/icons/Search_alt_light.png" />
-            <div onClick={() => setIsCartOpen(!isCartOpen)}>
+            <div
+              onClick={() =>
+                setIsCartOpen({ ...isCartOpen, desktop: !isCartOpen.desktop })
+              }
+            >
               <MenuIcon href="" src="/icons/Bag_light.png" />
             </div>
-            <div onClick={() => setIsProfileOpen(!isProfileOpen)}>
-              <MenuIcon href="" src="/Dropdown.png" />
-            </div>
+
+            <ProfileModal />
           </div>
         </div>
       </header>
@@ -96,9 +100,20 @@ const Header = () => {
         isMenuOpen={isMenuOpen}
         toggleMenu={toggleMenu}
       />
-      <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <CartModal
+        isOpen={isCartOpen.desktop}
+        onClose={() =>
+          setIsCartOpen({ ...isCartOpen, desktop: !isCartOpen.desktop })
+        }
+      />
+      <MobileCartModal
+        isOpen={isCartOpen.mobile}
+        onClose={() =>
+          setIsCartOpen({ ...isCartOpen, mobile: !isCartOpen.mobile })
+        }
+      />
       <div>
-        <ProfileModal
+        <MobileProfileModal
           isOpen={isProfileOpen}
           onClose={() => setIsProfileOpen(false)}
         />
@@ -107,4 +122,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default DashHeader;

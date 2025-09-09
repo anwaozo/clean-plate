@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "../_components/title";
-import LoyaltyPointsPage from "../_components/loyalty-points";
+import Title from "../../_components/title";
+import LoyaltyPointsPage from "../../_components/loyalty-points";
 
 const page = () => {
   return (

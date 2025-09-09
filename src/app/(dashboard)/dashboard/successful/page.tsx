@@ -1,5 +1,5 @@
 import React from "react";
-import SuccessfulOrder from "../_components/successful-order";
+import SuccessfulOrder from "../../_components/successful-order";
 const meals = [
   {
     id: 1,

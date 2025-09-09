@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Title from "../_components/title";
-import ReusableTabs from "../_components/reusable-tabs";
-import OrderCard from "../_components/order-card";
+import Title from "../../_components/title";
+import ReusableTabs from "../../_components/reusable-tabs";
+import OrderCard from "../../_components/order-card";
 
 const processingOrders = [
   {

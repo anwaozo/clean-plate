@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import Title from "../_components/title";
-import ReusableTabs from "../_components/reusable-tabs";
-import SubscriptionCard from "../_components/subscription-card";
+import Title from "../../_components/title";
+import ReusableTabs from "../../_components/reusable-tabs";
+import SubscriptionCard from "../../_components/subscription-card";
 import {
   processingSubscriptions,
   activeSubscriptions,

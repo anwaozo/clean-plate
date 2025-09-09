@@ -1,6 +1,6 @@
 import React from "react";
-import OrderSummary from "../_components/order-summary";
-import CheckoutForm from "../_components/checkout-form";
+import OrderSummary from "../../_components/order-summary";
+import CheckoutForm from "../../_components/checkout-form";
 
 const page = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import CheckoutBreadcrumb from "../_components/checkout-breadcrumb";
-import OrderSummary from "../_components/order-summary";
-import CheckoutForm from "../_components/checkout-form";
+import CheckoutBreadcrumb from "../../_components/checkout-breadcrumb";
+import OrderSummary from "../../_components/order-summary";
+import CheckoutForm from "../../_components/checkout-form";
 
 const page = () => {
   return (
