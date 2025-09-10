@@ -77,7 +77,7 @@ const ProfileModal = () => {
       <div className="hidden md:block">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="bg-transparent shadow-none p-0">
+            <Button className="bg-transparent hover:bg-transparent shadow-none p-0">
               <MenuIcon href="" src="/Dropdown.png" />
             </Button>
           </DropdownMenuTrigger>

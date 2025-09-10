@@ -60,7 +60,14 @@ const page = () => {
           </div>
 
           <div className="space-y-4">
-            <ReusableButton text="Login" />
+            <Link href="/dashboard">
+              <Button
+                className="w-full shadow-none hover:bg-mealprep-orange/90 px-4 py-2 h-fit"
+                type="submit"
+              >
+                Login
+              </Button>
+            </Link>
             <Button className="bg-transparent text-[#212121] w-full border border-[#EEEEEE] p-2 h-fit shadow-none">
               <Image
                 src={"/Google logo.svg"}

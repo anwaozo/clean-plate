@@ -100,7 +100,7 @@ export default function MealSearchFilterBar() {
       </div>
 
       {/* Mobile Filter Button */}
-      <div className="md:hidden flex justify-end mb-8">
+      <div className="md:hidden flex justify-start mb-8">
         <Button
           variant="outline"
           className="border-gray-300 text-mealprep-text-dark px-4 py-3 rounded-lg bg-transparent"

@@ -9,7 +9,7 @@ import { useState } from "react";
 
 import { Header as NAV_ITEMS } from "../../../cms-services/common";
 import BrandLogo, { MenuIcon } from "./layouts/logo";
-import { X } from "lucide-react";
+import { Hamburger, Menu, X } from "lucide-react";
 import CartModal from "./cart-modal";
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
           <span className="text-center text-xs">
             You'll get 2 free meals on your first subscription
           </span>
-          <Link href="/sign-up" >
+          <Link href="/sign-up">
             <Button
               variant="secondary"
               size="sm"
@@ -59,7 +59,7 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 <Image
-                  src={"/quill_hamburger.png"}
+                  src={"/Status_list.png"}
                   alt="phone icon"
                   height={24}
                   width={24}

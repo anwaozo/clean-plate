@@ -76,7 +76,7 @@ const DashHeader = () => {
             >
               <MenuIcon href="" src="/icons/Bag_light.png" />
             </div>
-            <div onClick={() => setIsProfileOpen(false)}>
+            <div onClick={() => setIsProfileOpen(!isProfileOpen)}>
               <MenuIcon href="" src="/Dropdown.png" />
             </div>
           </div>

@@ -8,7 +8,7 @@ import { MEALS } from "@/lib/data";
 const MealsList = ({ title }: { title: string }) => {
   return (
     <>
-      <div className="max-w-[1400px] mx-auto px-4 md:px-6 mt-10">
+      <div className="max-w-[1400px] w-full mx-auto px-4 md:px-6 mt-10">
         <div className="text-center text-[#212121] mb-8 md:mb-12">
           <h1 className="text-3xl md:text-5xl font-bricolageG  font-bold text-[#212121] mb-0">
             {title}
@@ -17,7 +17,7 @@ const MealsList = ({ title }: { title: string }) => {
         </div>
 
         {/* Search bar for mobile and desktop */}
-        <div className="relative mb-8 md:hidden">
+        <div className="relative mb-8 w-full md:hidden">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
           <Input
             type="text"
