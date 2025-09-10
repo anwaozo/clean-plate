@@ -76,15 +76,12 @@ const ChatWindow = ({ chatId, onBack }: ChatWindowProps) => {
     <div className="h-full md:bg-white flex flex-col">
       <div className="md:py-4 flex md:items-center md:justify-center gap-3">
         <div className="flex items-center gap-2 md:hidden w-full">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="p-0"
-            onClick={onBack}
-          >
+          <Button variant="ghost" size="sm" className="p-0" onClick={onBack}>
             <ChevronLeft size={20} />
           </Button>
-          <p className="flex items-center justify-center w-full text-center">Operator</p>
+          <p className="flex items-center justify-center w-full text-center">
+            Operator
+          </p>
         </div>
 
         <div className="hidden md:flex items-center justify-center gap-3 bg-[#F8F7F2] p-2.5 rounded-[10px] text-[#4B4B4B]">
