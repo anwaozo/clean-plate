@@ -51,7 +51,7 @@ export default function RewardsSection() {
                 </Button>
               </form>
               <p className="text-xs text-mealprep-text-light">
-                By submitting, you agree to receive emails from MealPrep.co.
+                By submitting, you agree to receive emails from Clean Plate.
                 View our{" "}
                 <Link href="#" className="underline text-mealprep-orange">
                   Privacy Policy

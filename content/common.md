@@ -1,6 +1,6 @@
 ---
 Brandlogo:
-  image: "/MealPrepLogo.png"
+  image: "/Clean-plate.png"
 
 Header:
   menu:

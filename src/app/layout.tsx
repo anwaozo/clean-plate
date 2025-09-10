@@ -7,7 +7,7 @@ import AosClient from "./components/aos-client";
 export const metadata = {
   title: {
     template: "%s",
-    default: "Welcome | Meal Prep",
+    default: "Welcome | Clean Plate",
   },
   description: {
     template: "%s",

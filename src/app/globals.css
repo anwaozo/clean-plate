@@ -16,7 +16,7 @@
 
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 18, 99%, 61%;
+    --primary: 33 93% 58%;
 
     --primary-foreground: 0 0% 98%;
 
@@ -162,4 +162,3 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-

@@ -10,14 +10,14 @@ const page = () => {
   const chats = [
     {
       id: "1",
-      title: "Welcome to MealPrep.co Support.",
+      title: "Welcome to Clean Plate Support.",
       lastMessage: "Hello! Let me confirm that for you",
       timestamp: "30 days ago",
       unread: false,
     },
     {
       id: "2",
-      title: "Welcome to MealPrep.co Support.",
+      title: "Welcome to Clean Plate Support.",
       lastMessage: "Hello! Let me confirm that for you",
       timestamp: "30 days ago",
       unread: false,

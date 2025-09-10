@@ -125,7 +125,7 @@ const SubscriptionModal = ({
                     <>
                       <button
                         onClick={warningMessage.onLinkClick}
-                        className="text-[#FE7438] underline hover:no-underline ml-1.5"
+                        className="text-[#F89E32] underline hover:no-underline ml-1.5"
                       >
                         {warningMessage.linkText}
                       </button>
@@ -150,7 +150,7 @@ const SubscriptionModal = ({
             disabled={primaryButton.disabled}
             className={`flex-1 py-2 px-4 h-fit  disabled:opacity-50 disabled:cursor-not-allowed shadow-none ${
               primaryButtonVariant === "default"
-                ? "bg-[#FE7438] hover:bg-[#FE7438]/90 text-white"
+                ? "bg-[#F89E32] hover:bg-[#F89E32]/90 text-white"
                 : ""
             }`}
           >

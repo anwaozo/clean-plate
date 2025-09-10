@@ -2,19 +2,18 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { BrandLogoWhite } from "./layouts/logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#5C3F2F] text-white py-16">
+    <footer className="bg-[#2A8449] text-white py-16">
       <div className="max-w-[1400px] mb-10 flex flex-col lg:flex-row justify-between items-left lg:items-center px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-left text-left lg:max-w-sm md:items-start w-full">
           <p className="text-lg text-white text-left">
             Get 20% off your first order
           </p>
           <p className="text-xs text-white">
-            By submitting, you agree to receive emails from MealPrep.co. View
+            By submitting, you agree to receive emails from Clean Plate. View
             our{" "}
             <Link href="#" className="underline hover:text-mealprep-orange">
               Privacy Policy
@@ -29,7 +28,7 @@ export default function Footer() {
             placeholder="Enter your email"
             className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60 w-full lg:w-[500px] focus:ring-mealprep-orange focus:border-mealprep-orange"
           />
-          <Button className="bg-[#FE7438] text-white text-sm hover:bg-mealprep-orange/90">
+          <Button className="bg-primary text-white text-sm hover:bg-mealprep-orange/90">
             Get Promo
           </Button>
         </form>
@@ -135,25 +134,25 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-[1400px] flex flex-col lg:flex-row justify-between items-center mx-auto px-4 md:px-6 mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/60">
-        <p>Copyright &copy;{new Date().getFullYear()} Mealprep.co</p>
+        <p>Copyright &copy;{new Date().getFullYear()} Cleanplate</p>
         <div className="flex gap-4 mt-4">
           <Link
             href="#"
             className="text-white hover:text-mealprep-orange transition-colors"
           >
-            <Image src="/icons/Button (2).png" width={40} height={40} alt="" />
+            <Image src="/Button (3).png" width={40} height={40} alt="" />
           </Link>
           <Link
             href="#"
             className="text-white hover:text-mealprep-orange transition-colors"
           >
-            <Image src="/icons/Button (1).png" width={40} height={40} alt="" />
+            <Image src="/Button (4).png" width={40} height={40} alt="" />
           </Link>
           <Link
             href="#"
             className="text-white hover:text-mealprep-orange transition-colors"
           >
-            <Image src="/icons/Button.png" width={40} height={40} alt="" />
+            <Image src="/Button (5).png" width={40} height={40} alt="" />
           </Link>
         </div>
       </div>

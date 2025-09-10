@@ -103,7 +103,7 @@ const ProductCard = ({ meal }: { meal: ProductProps }) => {
             </div>
           </div>
 
-          <Button className=" bg-[#2A8449] text-white hover:bg-green-button/90 rounded-lg">
+          <Button className=" bg-[#49B848] text-white hover:bg-green-button/90 rounded-lg">
             Add to cart
           </Button>
         </div>

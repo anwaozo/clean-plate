@@ -129,7 +129,7 @@ const Profile = () => {
             email
           </p>
         </div>
-        <div className="w-12 h-6 bg-[#FE7438] rounded-full shadow-inner relative flex items-center justify-end pr-1">
+        <div className="w-12 h-6 bg-[#F89E32] rounded-full shadow-inner relative flex items-center justify-end pr-1">
           <div className="w-4 h-4 bg-white rounded-full"></div>
         </div>
       </div>

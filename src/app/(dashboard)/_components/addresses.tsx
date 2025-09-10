@@ -53,7 +53,7 @@ const Addresses = ({ addresses }: AddressesProps) => {
                   <div
                     className={`h-5 w-10 rounded-full   ${
                       address.isDefault
-                        ? "bg-[#FE7438] flex items-center justify-end pr-0.5"
+                        ? "bg-[#F89E32] flex items-center justify-end pr-0.5"
                         : "bg-[#DFDEDC] flex items-center justify-start pl-0.5"
                     } transition-transform duration-100 ease-in-out`}
                   >

@@ -29,7 +29,7 @@ const CheckoutBreadcrumb = () => {
           </span>
         </div>
 
-        <div className="w-5  lg:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
+        <div className="w-5  lg:w-24 h-px bg-[#F89E32] flex-shrink-0"></div>
 
         <div className="flex items-center flex-shrink-0">
           <div className="w-6 h-6">
@@ -45,7 +45,7 @@ const CheckoutBreadcrumb = () => {
           </span>
         </div>
 
-        <div className="w-5  lg:w-24 h-px bg-[#FE7438] flex-shrink-0"></div>
+        <div className="w-5  lg:w-24 h-px bg-[#F89E32] flex-shrink-0"></div>
 
         <div className="flex items-center flex-shrink-0">
           <div className="w-6 h-6">
