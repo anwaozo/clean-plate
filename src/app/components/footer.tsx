@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { BrandLogoWhite } from "./layouts/logo";
 
 export default function Footer() {
