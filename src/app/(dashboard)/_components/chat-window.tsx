@@ -148,7 +148,7 @@ const ChatWindow = ({ chatId, onBack }: ChatWindowProps) => {
               <div
                 className={`p-3 rounded-lg ${
                   msg.sender === "user"
-                    ? "bg-[#FE7438] text-white"
+                    ? "bg-[#F89E32] text-white"
                     : "bg-gray-100 text-[#4B4B4B]"
                 }`}
               >
@@ -202,7 +202,7 @@ const ChatWindow = ({ chatId, onBack }: ChatWindowProps) => {
           <Button
             onClick={handleSendMessage}
             disabled={!message.trim()}
-            className="bg-[#FE7438] hover:bg-[#FE7438]/90 text-white absolute right-2 top-1/2 transform -translate-y-1/2 disabled:opacity-50 py-2.5 h-fit shadow-none"
+            className="bg-[#F89E32] hover:bg-[#F89E32]/90 text-white absolute right-2 top-1/2 transform -translate-y-1/2 disabled:opacity-50 py-2.5 h-fit shadow-none"
           >
             <Send size={16} />
           </Button>

@@ -45,7 +45,7 @@ export default function MealPlanningSection() {
               <div>
                 <h3 className="text-lg  font-bricolageG font-semibold text-mealprep-dark-brown mb-1">
                   Choose One-off{" "}
-                  <span className="text-[#EF3107]">
+                  <span className="text-[#F89E32]">
                     {" "}
                     or a Subscription Plan
                   </span>

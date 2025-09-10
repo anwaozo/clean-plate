@@ -21,9 +21,9 @@ export const BrandLogoWhite = ({ size = "lg" }: { size?: "sm" | "lg" }) => {
   return (
     <Link href={"/"}>
       <Image
-        src={"/Logo 3 (1).png"}
+        src={"/Frame 2087327326 (1).png"}
         alt="logo"
-        width={size === "sm" ? 100 : 150}
+        width={size === "sm" ? 150 : 250}
         height={150}
       />
     </Link>

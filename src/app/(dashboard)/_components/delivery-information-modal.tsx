@@ -154,7 +154,7 @@ const DeliveryInformationModal = ({
           </Button>
           <Button
             onClick={handleSave}
-            className="flex-1  bg-[#FE7438] hover:bg-orange-600 text-white"
+            className="flex-1  bg-[#F89E32] hover:bg-orange-600 text-white"
           >
             Save
           </Button>

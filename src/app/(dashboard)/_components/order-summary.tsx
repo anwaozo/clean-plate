@@ -46,7 +46,7 @@ const OrderSummary = ({ title }: { title: string }) => {
         <div className="flex items-center justify-between p-4 border border-[#EEEEEE] rounded-lg text-[#212121]">
           <span className="text-sm">One-time</span>
           <div className="relative">
-            <div className="w-12 h-6 bg-[#FE7438] rounded-full shadow-inner relative flex items-center justify-end pr-1">
+            <div className="w-12 h-6 bg-[#F89E32] rounded-full shadow-inner relative flex items-center justify-end pr-1">
               <div className="w-4 h-4 bg-white rounded-full"></div>
             </div>
           </div>
@@ -151,7 +151,7 @@ const OrderSummary = ({ title }: { title: string }) => {
         </p>
         <p className="mt-4">
           For full details, see our{" "}
-          <span className="text-[#FE7438] underline">
+          <span className="text-[#F89E32] underline">
             Cancellation & Refund Policy
           </span>
         </p>

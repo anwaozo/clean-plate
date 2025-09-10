@@ -20,7 +20,7 @@ const LoyaltyPointsPage = () => {
   return (
     <div className="max-w-[1000px] mx-auto  space-y-8 border-2 border-dashed border-[#EEEEEE] rounded-[10px]">
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 rounded-[10px] p-4 md:p-6">
-        <div className="bg-[#FE7438] rounded-2xl p-6 text-white min-w-[280px] lg:w-[320px] flex flex-col justify-center">
+        <div className="bg-[#F89E32] rounded-2xl p-6 text-white min-w-[280px] lg:w-[320px] flex flex-col justify-center">
           <h2 className="text-base mb-4 tracking-wider">AVAILABLE POINTS</h2>
           <div className="flex items-center gap-4">
             <div className="p-2.5 bg-white rounded-[10px] flex items-center justify-center">

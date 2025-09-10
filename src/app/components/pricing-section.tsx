@@ -42,14 +42,14 @@ export default function PricingSection() {
     <section className="py-16 bg-[#F8F7F2]">
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 text-center">
         <div className="flex flex-col lg:flex-row gap-5 lg:justify-between items-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#5C3F2F] mb-4 lg:mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold font-bricolageG text-[#212121] mb-4 lg:mb-12">
             Ready to Eat Better{" "}
-            <span className="text-[#FE7438]">
+            <span className="text-[#F89E32]">
               <br />
               Without the Effort?
             </span>
           </h2>
-          <p className="text-sm text-center lg:text-left px-10 font-semibold max-w-[400px] text-[#5C3F2F] mb-8">
+          <p className="text-sm text-center lg:text-left px-10 font-semibold max-w-[400px] text-[#212121] mb-8">
             Sign up today and take the first step towards hassle-free, healthy
             living.
           </p>
@@ -59,7 +59,7 @@ export default function PricingSection() {
             <div
               key={index}
               className={`
-                bg-[#EEEEEE] text-[#212121] hover:bg-[#5C3F2F] hover:col-span-1 hover:text-[#EEEEEE] rounded-2xl p-8 shadow-lg flex flex-col justify-start items-left  duration-300 group`}
+                bg-[#EEEEEE] text-[#212121] hover:bg-[#2A8449] hover:col-span-1 hover:text-[#EEEEEE] rounded-2xl p-8 shadow-lg flex flex-col justify-start items-left  duration-300 group`}
             >
               <h3 className="text-xl text-left font-semi-bold mb-6">{plan.name}</h3>
               <p
@@ -82,7 +82,7 @@ export default function PricingSection() {
 
               <Button
                 variant="outline"
-                className=" text-mealprep-orange px-8 py-4 text-sm bg-white border-none rounded-lg group-hover:bg-[#FE7438] transition-colors  group-hover:text-mealprep-orange"
+                className=" text-mealprep-orange px-8 py-4 text-sm bg-white border-none rounded-lg group-hover:bg-[#F89E32] transition-colors  group-hover:text-mealprep-orange"
               >
                 {plan.buttonText}
               </Button>

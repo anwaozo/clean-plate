@@ -41,16 +41,16 @@ const HeroSection = () => {
               meals designed to fit your lifestyle. No stress, no cooking, just
               wholesome food made for you.
             </p>
-            <div className="flex flex-col w-full sm:flex-row justify-center items-center gap-4">
+            <div className="flex flex-col w-full sm:flex-row justify-center items-center  gap-4">
               <Link className="w-full" href={"/browse-meals"}>
-                <Button className="bg-primary w-full lg:w-[250px]  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
+                <Button className="bg-primary w-full lg:w-full  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
                   Explore Meals
                 </Button>
               </Link>
               <Link className="w-full" href={"/sign-up"}>
                 <Button
                   variant="secondary"
-                  className="bg-white w-full lg:w-[250px]  text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
+                  className="bg-white w-full lg:w-full  text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Button>

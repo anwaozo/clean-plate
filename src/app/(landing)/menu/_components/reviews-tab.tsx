@@ -40,7 +40,7 @@ const ReviewsTab = ({
           Based on {totalReviews} reviews
         </p>
         <p className="text-[#4B4B4B] text-sm">
-          Feedback from verified MealPrep.co customers
+          Feedback from verified Clean Plate customers
           <br />
           who've previously ordered this dish.
         </p>

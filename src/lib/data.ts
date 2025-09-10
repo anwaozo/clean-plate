@@ -87,7 +87,7 @@ export const MEALS = [
     id: 2,
     image: "/image1.png",
     alt: "Spicy Tofu Stir-Fry",
-    badges: [{ text: "Spicy", color: "bg-[#FE7438] text-white" }],
+    badges: [{ text: "Spicy", color: "bg-[#F89E32] text-white" }],
     title: "Spicy Tofu Stir-Fry",
     description: "Bold, colorful, plant-based goodness with a kick of spice.",
     time: "15mins",
@@ -101,7 +101,7 @@ export const MEALS = [
     id: 3,
     image: "/Frame 14.png",
     alt: "BBQ Ranch Chicken Flatbreads",
-    badges: [{ text: "Bestseller", color: "bg-[#FE7438] text-white" }],
+    badges: [{ text: "Bestseller", color: "bg-[#F89E32] text-white" }],
     title: "BBQ Ranch Chicken Flatbreads",
     description:
       "With double cheese, it's topped with tangy-sweet BBQ chicken, mozzarella, white cheddar, and a drizzle of ranch dressing.",

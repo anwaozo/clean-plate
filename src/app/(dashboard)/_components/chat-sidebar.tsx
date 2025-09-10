@@ -26,9 +26,9 @@ const ChatSidebar = ({
   return (
     <div className="min-h-full bg-white flex flex-col justify-between md:shadow-2xl rounded-[10px] md:py-4">
       <div className="p-4 flex flex-col items-center justify-center gap-3">
-        <Image src="/Logo 4.svg" alt="Status List" height={40} width={40} />
+        <Image src={"/Frame 2087327326 (2).png"} alt="Status List" height={40} width={40} />
         <h1 className="text-xl font-semibold text-[#212121] text-center leading-tight">
-          Welcome to MealPrep.co Support.
+          Welcome to Clean Plate Support.
         </h1>
       </div>
 
@@ -38,7 +38,7 @@ const ChatSidebar = ({
             key={chat.id}
             onClick={() => onChatSelect(chat.id)}
             className={`p-4 border-b border-[#E9EDF7]  cursor-pointer hover:bg-gray-50 transition-colors ${
-              selectedChatId === chat.id ? "border-l-4 border-l-[#FE7438]" : ""
+              selectedChatId === chat.id ? "border-l-4 border-l-[#F89E32]" : ""
             }`}
           >
             <div className="flex items-start gap-3">
@@ -62,10 +62,10 @@ const ChatSidebar = ({
           </div>
         ))}
         <Button
-          className="w-full bg-[#F8F7F2] hover:bg-[#F8F7F2] text-[#FE7438] font-semibold p-2.5 h-fit flex items-center gap-2"
+          className="w-full bg-[#F8F7F2] hover:bg-[#F8F7F2] text-[#F89E32] font-semibold p-2.5 h-fit flex items-center gap-2"
           onClick={() => console.log("New chat")}
         >
-          <Plus size={16} className="text-white bg-[#FE7438] rounded-full w-fit h-fit" />
+          <Plus size={16} className="text-white bg-[#F89E32] rounded-full w-fit h-fit" />
           New chat
         </Button>
       </div>

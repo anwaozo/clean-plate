@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AppCtaSection() {
   return (
-    <section className="relative max-w-[1400px] mx-auto w-full pb-5 md:pb-0 pt-5 my-5 md:pt-5  rounded-none md:rounded-3xl overflow-hidden bg-[#FE7438] ">
+    <section className="relative max-w-[1400px] mx-auto w-full pb-5 md:pb-0 pt-5 my-5 md:pt-5  rounded-none md:rounded-3xl overflow-hidden bg-[#F89E32] ">
       {/* <Image
         src="/Frame 2 (1).png"
         alt="MealPrep App on mobile phones"
@@ -13,18 +13,18 @@ export default function AppCtaSection() {
       /> */}
       <div className="relative z-10  flex  flex-col md:flex-row gap-10 justify-center items-center px-4 md:px-6 text-left text-white">
         <Image
-          src="/Frame 111.png"
+          src="/Frame 111 (1).png"
           alt="MealPrep App on mobile phones"
-          width={500}
-          height={500}
+          width={1000}
+          height={800}
           className="   "
         />
         <div>
-          <h2 className="text-3xl md:text-4xl font-bricolageG lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bricolageG lg:text-5xl font-semibold mb-4">
             Ready to Upgrade Your Mealtime Routine?
           </h2>
           <p className="text-md md:text-lg  mb-8">
-            Join MealPrep.co today and enjoy fresh, chef-prepared meals
+            Join Clean Plate today and enjoy fresh, chef-prepared meals
             delivered to your door. Convenient, healthy, and designed to fit
             your lifestyle with no stress, no hassle.
           </p>
