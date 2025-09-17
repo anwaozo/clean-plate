@@ -29,9 +29,18 @@ const HeroSection = () => {
           <div className=" inset-0  backdrop-blur-[1px] z-10 py-20 text-center px-0">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="inline-block h-2 w-2 rounded-full bg-mealprep-orange" />
-              <span className="text-white text-sm text center font-medium uppercase tracking-wider">
+              <div className="flex gap-2 justify-center items-center">
+                <Image
+                  src={"/logo (1).png"}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+                 <span className="text-white text-sm text center font-medium uppercase tracking-wider">
                 Meal Prep Made Effortless
               </span>
+              </div>
+             
             </div>
             <h1 className="text-4xl md:text-5xl font-bricolageG lg:text-5xl xl:text-6xl font-bold text-white  leading-tight mb-6">
               Fresh, Healthy Meals Delivered to Your Doorstep
@@ -41,16 +50,16 @@ const HeroSection = () => {
               meals designed to fit your lifestyle. No stress, no cooking, just
               wholesome food made for you.
             </p>
-            <div className="flex flex-col w-full sm:flex-row justify-center items-center  gap-4">
+            <div className="flex flex-col w-full lg:max-w-sm mx-auto sm:flex-row justify-center items-center  gap-4">
               <Link className="w-full" href={"/browse-meals"}>
-                <Button className="bg-primary w-full lg:w-full  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
+                <Button className="bg-primary w-full lg:w-[200px]  text-white px-8 py-5 text-md rounded-lg hover:bg-primary transition-colors">
                   Explore Meals
                 </Button>
               </Link>
               <Link className="w-full" href={"/sign-up"}>
                 <Button
                   variant="secondary"
-                  className="bg-white w-full lg:w-full  text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
+                  className="bg-white w-full lg:w-[200px]   text-mealprep-orange px-8 py-5 text-md rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Button>
